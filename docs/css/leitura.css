@@ -1,0 +1,411 @@
+/* ==========================================================================
+   CDA — Camada de leitura e design
+   --------------------------------------------------------------------------
+  /objectivo: texto curto por omissao, com expansao sob pedido.
+
+   Base de referencia (medida, nao opiniao):
+   - GOV.UK Design System  -> largura maxima 1020px; texto em "two-thirds",
+     nunca mais de 75 caracteres por linha; foco visivel obrigatorio
+     (WCAG 2.2 AA, criterio 1.4.3).
+   - Singapore Customs  -> contentor 1240px, familia Inter.
+   - South Africa gov   -> contentor 768px, familia Roboto.
+   - Australia Home Affairs (Bootstrap 5) -> 1186 variaveis CSS, dimensionamento
+     em rem: as custom properties sao o padraoactual de tematizacao.
+   - Medicao em 9 sites institucionais: nenhum usa `prefers-color-scheme`
+     e nenhum usa `clamp()`. Aqui o modo escuro fica de fora por ser
+     atipico em sites de governo; o `clamp()` entra so no texto,
+     onde e seguro.
+   ========================================================================== */
+
+:root {
+  /* --- escala tipografica fluida (clamp) ------------------------------- */
+  --t-xs:   0.75rem;
+  --t-sm:   0.875rem;
+  --t-base: 1rem;
+  --t-lead: clamp(1.05rem, 0.99rem + 0.3vw, 1.2rem);
+  --t-h4:   clamp(1.05rem, 1rem + 0.25vw, 1.15rem);
+  --t-h3:   clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+  --t-h2:   clamp(1.4rem, 1.25rem + 0.75vw, 1.85rem);
+  --t-h1:   clamp(1.9rem, 1.5rem + 2vw, 3rem);
+
+  /* --- medida de leitura -------------------------------------------------
+     GOV.UK: nunca mais de 75 caracteres por linha. 68ch deixa margem.      */
+  --measure: 68ch;
+  --measure-wide: 92ch;
+
+  /* --- escala de espacamento -------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+
+  /* --- superficies ------------------------------------------------------ */
+  --surface: #ffffff;
+  --surface-2: #f6f7f9;
+  --surface-3: #eef1f5;
+  --hairline: #dfe4ea;
+
+  /* --- cor de foco: padrao GOV.UK (amarelo, texto preto) ----------------- */
+  --focus: #ffdd00;
+  --focus-ink: #0b0c0c;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+}
+
+/* ==========================================================================
+   1. Medida de leitura
+   ========================================================================== */
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 0.7rem + 1.5vw, 2rem);
+}
+
+/* Texto corrido nunca ocupa a largura toda do contentor: 1200px com texto
+   corrido obriga a cansar os olhos. Cards e grelhas podem usar a largura
+   toda; a prosa, nao. */
+.section > .container > p,
+.section > .container > h2,
+.section > .container > h3,
+.section > .container > ul,
+.section > .container > ol,
+.prosa,
+main > p,
+main > ul,
+main > ol {
+  max-width: var(--measure);
+}
+
+/* Títulos de secção podem ser mais largos que a prosa */
+.section > .container > h2 { max-width: 30ch; }
+
+/* ==========================================================================
+   2. Tipografia base
+   ========================================================================== */
+
+body {
+  font-size: var(--t-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .hero h1 { font-size: var(--t-h1); line-height: 1.15; }
+h2             { font-size: var(--t-h2); line-height: 1.2; }
+h3             { font-size: var(--t-h3); line-height: 1.3; }
+h4             { font-size: var(--t-h4); line-height: 1.35; }
+
+.lead, p.lead { font-size: var(--t-lead); line-height: 1.55; }
+
+/* ==========================================================================
+   3. Foco visivel — WCAG 2.2 AA
+   ========================================================================== */
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+  color: var(--focus-ink);
+  background-color: var(--focus);
+  box-shadow: none;
+}
+
+/* Sobre fundo escuro (hero, rodapé) o amarelo do GOV.UK mantém-se legível */
+.hero :focus-visible,
+footer :focus-visible,
+.site-footer :focus-visible,
+.topbar :focus-visible {
+  outline-color: var(--focus);
+  background-color: var(--focus);
+  color: var(--focus-ink);
+}
+
+/* ==========================================================================
+   4. LEITURA PROGRESSIVA — o componente central
+   --------------------------------------------------------------------------
+   Usa <details>/<summary> nativos: funciona sem JavaScript, é acessível por
+   teclado e por leitores de ecrã sem código extra.
+   ========================================================================== */
+
+.leitura { margin-block: var(--sp-5); }
+
+/* O bloco "dobrado" é o que fica escondido */
+.leitura__conteudo {
+  max-width: var(--measure);
+  color: var(--text-soft);
+  padding-top: var(--sp-3);
+  animation: leitura-abre 180ms ease-out;
+}
+
+@keyframes leitura-abre {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leitura__conteudo { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* O botão "Saber mais" */
+.leitura__gatilho {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: var(--sp-3);
+  padding: 0.55em 1.1em;
+  background: transparent;
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  color: var(--navy);
+  font: inherit;
+  font-size: var(--t-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 140ms ease, color 140ms ease,
+              border-color 140ms ease;
+}
+
+.leitura__gatilho::-webkit-details-marker { display: none; }
+.leitura__gatilho::marker { content: ""; }
+
+/* Chevron animado */
+.leitura__gatilho::after {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 160ms ease;
+}
+
+.leitura[open] > .leitura__gatilho::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.leitura__gatilho:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* Resumo curto antes do gatilho: uma linha, no máximo */
+.leitura__resumo {
+  max-width: var(--measure);
+  color: var(--text);
+  font-size: var(--t-lead);
+  line-height: 1.55;
+  margin: 0 0 var(--sp-1);
+}
+
+/* Etiqueta discreta antes do texto dobrado */
+.leitura__rotulo {
+  display: block;
+  max-width: var(--measure);
+  margin: var(--sp-5) 0 var(--sp-2);
+  color: var(--red);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   4b. Variante "lista de factos" — o bloco expandido é um fact-box, nao
+   mais um paragrafo. Le-se melhor e ocupa menos espaco vertical.
+   -------------------------------------------------------------------------- */
+
+.factos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.factos li {
+  position: relative;
+  padding-left: 1.6em;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.factos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.factos strong { color: var(--navy); }
+
+/* --------------------------------------------------------------------------
+   4c. Variante "passo a passo"
+   -------------------------------------------------------------------------- */
+
+.passos { counter-reset: passo; list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+
+.passos li {
+  counter-increment: passo;
+  position: relative;
+  padding-left: 2.6em;
+  margin-bottom: var(--sp-4);
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.passos li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.9em;
+  height: 1.9em;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.passos strong { color: var(--navy); display: block; }
+
+/* ==========================================================================
+   5. Barra de controlo "todas as secções"
+   ========================================================================== */
+
+.leitura-controlo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  margin: var(--sp-4) 0 var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  max-width: var(--measure-wide);
+}
+
+.leitura-controlo__nota {
+  font-size: var(--t-sm);
+  color: var(--text-soft);
+  margin-right: auto;
+}
+
+.leitura-btn {
+  padding: 0.45em 0.95em;
+  background: var(--surface);
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  color: var(--navy);
+  font: inherit;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.leitura-btn:hover { background: var(--navy); color: #fff; }
+
+/* ==========================================================================
+   6. Cartoes: mais ar, menos ruido
+   ========================================================================== */
+
+.card,
+.cartao,
+.service-card,
+.servico,
+.noticia-card,
+.parceiro,
+.doc-item {
+  border-radius: var(--radius);
+  transition: transform 160ms ease, box-shadow 160ms ease,
+              border-color 160ms ease;
+}
+
+@media (hover: hover) {
+  .card:hover,
+  .cartao:hover,
+  .service-card:hover,
+  .servico:hover,
+  .noticia-card:hover,
+  .doc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(29, 43, 58, 0.1);
+  }
+}
+
+/* ==========================================================================
+   7. Ligacoes
+   ========================================================================== */
+
+main a:not(.btn):not(.leitura__gatilho) {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+main a:not(.btn):not(.leitura__gatilho):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ==========================================================================
+   8. Impressao
+   ========================================================================== */
+
+@media print {
+  .leitura[open] > .leitura__conteudo,
+  .leitura__conteudo { display: block !important; }
+  .leitura__gatilho, .leitura-controlo, .topbar, .nav, .site-footer { display: none !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; word-break: break-all; }
+}
+
+/* ==========================================================================
+   O FOCO NUNCA PODE SER REMOVIDO
+
+   Varias regras antigas de estilo.css fazem `outline: none` em campos
+   (.filtros input, .busca input, .form-group input, .ia-input input,
+   .assist-entrada input, .login-box input, .pin-ai-box textarea).
+
+   Essas regras têm especificidade 0,2,1 e o `:focus-visible` acima tem
+   apenas 0,1,0 — ou seja, o `outline: none` VENCIA e os campos ficavam sem
+   qualquer indicador de foco visível. É uma falha de WCAG 2.4.7 (Foco
+   Visível) e afectava todas as páginas com filtros ou formulários.
+
+   O `!important` é deliberado: serve de piso, para que nenhuma regra
+   posterior/volte a desligar o foco. A cor e o formato seguem o mesmo
+   sistema --focus já definido neste ficheiro.
+   ========================================================================== */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* O `background-color: var(--focus)` acima aplica-se a texto, não a campos.
+   Num campo de texto, pintar o fundo de amarelo a cada tabulação é
+   enganador — mantemos o fundo e o texto como o utilizador os definiu. */
+input:focus-visible,
+textarea:focus-visible {
+  color: inherit;
+  background-color: inherit;
+}

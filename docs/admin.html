@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-titulo="Painel Admin">Painel Admin — CDA Digital 2.0</title>
+<meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-64.png" sizes="64x64">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/cta.css">
+<link rel="stylesheet" href="css/leitura.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { background: var(--bg-alt); }
+  .admin-wrap { display: flex; gap: 24px; align-items: flex-start; margin: 24px 0; }
+  .admin-nav { flex: 0 0 220px; background: var(--navy); color: #fff; border-radius: 6px; padding: 12px 0; }
+  .admin-nav button { display: block; width: 100%; text-align: left; background: none; border: 0; color: #cbd5e1;
+    padding: 11px 20px; font: inherit; font-size: .92rem; cursor: pointer; border-left: 3px solid transparent; }
+  .admin-nav button:hover { background: rgba(255,255,255,.07); color: #fff; }
+  .admin-nav button.ativo { background: rgba(255,255,255,.12); border-left-color: var(--red); color: #fff; font-weight: 600; }
+  .admin-nav button.logout { border-top: 1px solid rgba(255,255,255,.15); margin-top: 10px; color: #f0b3ad; }
+  .admin-main { flex: 1; min-width: 0; }
+  .painel-painel { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px; }
+  .painel-painel h2 { margin: 0 0 14px; font-size: 1.25rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--bg-alt); color: var(--text-soft); font-weight: 600; }
+  tr.nao-lida { background: #fff6ec; font-weight: 600; }
+  .btn-mini { background: var(--navy); color: #fff; border: 0; border-radius: 3px; padding: 5px 9px; cursor: pointer; font-size: .8rem; margin: 2px; }
+  .btn-mini.perigo { background: var(--red); }
+  .estado { display: inline-block; padding: 2px 7px; border-radius: 10px; background: #eceff3; color: var(--text-soft); font-size: .75rem; font-weight: 600; }
+  .estado.estado-ok { background: #e4f3e6; color: #1e7b34; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 14px; margin-bottom: 18px; }
+  .stat-card { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 16px; text-align: center; }
+  .stat-card b { display: block; font-size: 1.7rem; color: var(--navy); }
+  .stat-card span { color: var(--text-soft); font-size: .82rem; }
+  .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); align-items: flex-start; justify-content: center;
+    padding: 40px 16px; z-index: 90; overflow: auto; }
+  .modal-caixa { background: #fff; border-radius: 8px; max-width: 720px; width: 100%; padding: 22px; }
+  .modal-caixa h3 { margin-top: 0; }
+  .modal-caixa label { display: block; margin: 10px 0 3px; font-size: .85rem; font-weight: 600; color: var(--text-soft); }
+  .modal-caixa input, .modal-caixa select, .modal-caixa textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--line);
+    border-radius: 4px; font: inherit; box-sizing: border-box; }
+  .modal-caixa textarea { min-height: 80px; }
+  .modal-caixa .linha { display: flex; gap: 12px; }
+  .modal-caixa .linha > div { flex: 1; }
+  .modal-acoes { display: flex; gap: 10px; margin-top: 18px; justify-content: flex-end; }
+  .gal-mini { width: 90px; height: 70px; object-fit: cover; border-radius: 4px; margin: 4px; cursor: pointer; border: 1px solid var(--line); }
+  .login-box-admin { max-width: 400px; margin: 30px auto; }
+  @media (max-width: 760px) { .admin-wrap { flex-direction: column; } .admin-nav { flex: none; width: 100%; display: flex; flex-wrap: wrap; }
+    .admin-nav button { width: auto; flex: 1 1 33%; border-left: 0; border-bottom: 3px solid transparent; text-align: center; }
+    .modal-caixa .linha { flex-direction: column; } }
+</style>
+<script src="js/config.js" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_MZ">
+<meta property="og:site_name" content="Câmara dos Despachantes Aduaneiros de Moçambique">
+<meta property="og:title" content="Painel Admin — CDA Digital 2.0">
+<meta property="og:description" content="Painel Admin — CDA Digital 2.0">
+<meta property="og:url" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/admin.html">
+<meta property="og:image" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/img/og-cda.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Painel Admin — CDA Digital 2.0">
+<meta name="twitter:description" content="Painel Admin — CDA Digital 2.0">
+<meta name="twitter:image" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/img/og-cda.png">
+<meta name="description" content="Área reservada da administração da Câmara dos Despachantes Aduaneiros de Moçambique.">
+</head>
+<body data-page="admin">
+
+<div class="topbar">
+  <div class="container">
+    <div><span class="tb-item">Painel de Administração — CDA Digital 2.0</span></div>
+    <div><a href="index.html">← Voltar ao portal</a></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html"><img src="img/logo-site.png" alt="Câmara dos Despachantes Aduaneiros de Moçambique"></a>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Portal</a></li>
+        <li><a href="admin.html" class="pag-ativa">Painel Admin</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Painel Admin</h1>
+    <p>Gestão central de conteúdo, documentos, membros e mensagens da CDA.</p>
+  </div>
+</section>
+
+<div class="breadcrumb"><div class="container">Painel Admin</div></div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- LOGIN -->
+    <div id="view-login">
+      <div class="login-box login-box-admin">
+        <h2 style="text-align:center">Acesso restrito</h2>
+        <p style="color:var(--text-soft);font-size:.9rem;text-align:center">Introduza as credenciais de administrador.</p>
+        <form id="form-login">
+          <label for="login-email">E-mail</label>
+          <input id="login-email" type="email" required placeholder="admin@cda-mz.org">
+          <label for="login-senha">Senha</label>
+          <input id="login-senha" type="password" required placeholder="••••••••">
+          <p id="login-msg" style="color:var(--red);font-size:.85rem"></p>
+          <button class="btn btn-red" type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ADMIN -->
+    <div id="view-admin" style="display:none">
+      <div class="admin-wrap">
+        <nav class="admin-nav">
+          <button data-seccao="dashboard" class="ativo">Dashboard</button>
+          <button data-seccao="documentos">Documentos</button>
+          <button data-seccao="noticias">Notícias</button>
+          <button data-seccao="actividades">Actividades</button>
+          <button id="nav-galeria">Galeria</button>
+          <button data-seccao="mensagens">Mensagens</button>
+          <button data-seccao="membros">Membros</button>
+          <button class="logout" data-accao="logout">Terminar sessão</button>
+        </nav>
+
+        <div class="admin-main">
+
+          <div id="v-dashboard" class="painel-painel">
+            <h2>Dashboard</h2>
+            <div class="stat-cards">
+              <div class="stat-card"><b id="stat-docs">-</b><span>Documentos</span></div>
+              <div class="stat-card"><b id="stat-noticias">-</b><span>Notícias</span></div>
+              <div class="stat-card"><b id="stat-actividades">-</b><span>Actividades</span></div>
+              <div class="stat-card"><b id="stat-msg">-</b><span>Mensagens</span></div>
+            </div>
+            <p><strong id="stat-servico">backend</strong></p>
+            <p style="color:var(--text-soft);font-size:.9rem">Depois de editar conteúdo, use <strong>Publicar</strong> para regenerar os dados do portal e o índice de IA.</p>
+            <button class="btn btn-navy" data-accao="publicar">Publicar (regenerar site + IA)</button>
+            <p id="pub-msg" style="margin-top:10px;font-size:.85rem"></p>
+          </div>
+
+          <div id="v-documentos" class="painel-painel" style="display:none">
+            <h2>Documentos <button class="btn-mini" data-accao="novo-doc" style="float:right">+ Novo / Enviar PDF</button></h2>
+            <p style="color:var(--text-soft);font-size:.85rem">Upload de PDF com OCR automático, ou registo de metadados.</p>
+            <table><thead><tr><th>Título</th><th>Tipo</th><th>Entidade</th><th>Ano</th><th>Status</th><th></th></tr></thead>
+            <tbody id="lista-docs"></tbody></table>
+          </div>
+
+          <div id="v-noticias" class="painel-painel" style="display:none">
+            <h2>Notícias <button class="btn-mini" data-accao="nova-not" style="float:right">+ Nova</button></h2>
+            <table><thead><tr><th>Título</th><th>Categoria</th><th>Data</th><th>Estado</th><th></th></tr></thead>
+            <tbody id="lista-noticias"></tbody></table>
+          </div>
+
+          <div id="v-actividades" class="painel-painel" style="display:none">
+            <h2>Actividades <button class="btn-mini" data-accao="nova-act" style="float:right">+ Nova</button></h2>
+            <table><thead><tr><th>Título</th><th>Categoria</th><th>Data</th><th>Local</th><th>Destaque</th><th></th></tr></thead>
+            <tbody id="lista-activs"></tbody></table>
+          </div>
+
+          <div id="v-galeria" class="painel-painel" style="display:none">
+            <h2>Galeria</h2>
+            <p style="color:var(--text-soft);font-size:.85rem">Clique numa imagem para copiar o nome do ficheiro (use em capas de actividades ou imagens de notícias).</p>
+            <div id="galeria-grelha"></div>
+          </div>
+
+          <div id="v-mensagens" class="painel-painel" style="display:none">
+            <h2>Mensagens de contacto</h2>
+            <table><thead><tr><th>Nome</th><th>Email</th><th>Assunto</th><th>Data</th><th></th></tr></thead>
+            <tbody id="lista-mensagens"></tbody></table>
+          </div>
+
+          <div id="v-membros" class="painel-painel" style="display:none">
+            <h2>Membros (contas)</h2>
+            <table><thead><tr><th>Nome</th><th>Email</th><th>Telefone</th><th>Tipo</th><th>Estado</th><th></th></tr></thead>
+            <tbody id="lista-membros"></tbody></table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL DOCUMENTO -->
+<div id="doc-modal" class="modal" style="display:none">
+  <div class="modal-caixa">
+    <h3 id="doc-form-title">Novo documento</h3>
+    <form id="form-doc">
+      <input id="doc-id" type="hidden">
+      <label>Título do documento</label>
+      <input id="doc-titulo" required placeholder="ex.: Circular n.º 010/CDA/2024">
+      <div class="linha">
+        <div><label>Ficheiro (nome .pdf)</label><input id="doc-ficheiro" placeholder="sem o caminho, ex. circular-010-cda-2024.pdf"></div>
+        <div><label>Ano</label><input id="doc-ano" type="number" placeholder="2024"></div>
+      </div>
+      <div class="linha">
+        <div><label>Tipo</label><input id="doc-tipo" placeholder="Circular / Legislação…"></div>
+        <div><label>Entidade</label><input id="doc-entidade" placeholder="CDA / DGA…"></div>
+      </div>
+      <div class="linha">
+        <div><label>Categoria</label><input id="doc-categoria" placeholder="Convocatórias, Circulares…"></div>
+        <div><label>Status</label>
+          <select id="doc-status">
+            <option value="vigente">Vigente</option>
+            <option value="revogado">Revogado</option>
+            <option value="substituido">Substituído</option>
+          </select>
+        </div>
+      </div>
+      <label>Enviar PDF (opcional — faz OCR automático + regista no índice)</label>
+      <input id="doc-upload" type="file" accept="application/pdf">
+      <button id="doc-submit" type="submit" style="display:none"></button>
+      <div class="modal-acoes">
+        <button type="button" class="btn" data-accao="fechar-modal">Cancelar</button>
+        <button type="submit" class="btn btn-red">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL NOTÍCIA -->
+<div id="not-modal" class="modal" style="display:none">
+  <div class="modal-caixa">
+    <h3>Notícia</h3>
+    <form id="form-not">
+      <input id="not-id" type="hidden">
+      <label>Título</label>
+      <input id="not-titulo" required>
+      <div class="linha">
+        <div><label>Categoria</label><input id="not-categoria"></div>
+        <div><label>Data</label><input id="not-data" type="date"></div>
+      </div>
+      <label>Resumo</label>
+      <textarea id="not-resumo"></textarea>
+      <label>Texto completo</label>
+      <textarea id="not-texto"></textarea>
+      <label>Imagem (nome do ficheiro na galeria)</label>
+      <input id="not-imagem" placeholder="ex.: 13-whatsapp-image-....jpg">
+      <label><input id="not-publicada" type="checkbox"> Publicada</label>
+      <div class="modal-acoes">
+        <button type="button" class="btn" data-accao="fechar-modal">Cancelar</button>
+        <button type="submit" class="btn btn-red">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL ACTIVIDADE -->
+<div id="act-modal" class="modal" style="display:none">
+  <div class="modal-caixa">
+    <h3>Actividade</h3>
+    <form id="form-act">
+      <input id="act-id" type="hidden">
+      <label>Título</label>
+      <input id="act-titulo" required>
+      <div class="linha">
+        <div><label>Categoria</label><input id="act-categoria"></div>
+        <div><label>Data</label><input id="act-data" type="date"></div>
+      </div>
+      <div class="linha">
+        <div><label>Local</label><input id="act-local"></div>
+        <div><label>Destaque</label><br><input id="act-destaque" type="checkbox" style="width:auto"></div>
+      </div>
+      <label>Descrição</label>
+      <textarea id="act-desc"></textarea>
+      <label>Capas (nomes de ficheiros da galeria, separados por vírgula)</label>
+      <input id="act-capas" placeholder="img1.jpg, img2.jpg">
+      <label>Documentos relacionados (nomes .pdf)</label>
+      <input id="act-docs" placeholder="doc1.pdf, doc2.pdf">
+      <div class="modal-acoes">
+        <button type="button" class="btn" data-accao="fechar-modal">Cancelar</button>
+        <button type="submit" class="btn btn-red">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/dados.js"></script>
+<script src="js/admin.js"></script>
+  <script src="js/leitura.js"></script>
+</body>
+</html>

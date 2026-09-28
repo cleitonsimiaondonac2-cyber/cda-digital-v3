@@ -1,0 +1,8 @@
+# Portal oficial da Camara dos Despachantes Aduaneiros de Mocambique
+# https://cleitonsimiaondonac2-cyber.github.io/cda-digital/
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://cleitonsimiaondonac2-cyber.github.io/cda-digital/sitemap.xml

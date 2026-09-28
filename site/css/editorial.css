@@ -1,0 +1,1024 @@
+/* ==========================================================================
+   CDA DIGITAL — direcção de arte
+   --------------------------------------------------------------------------
+   Objectivo do pedido: mesmar estrutura e profundidade de conteudo, reduzir a
+   densidade textual das areas de entrada e elevar a qualidade visual.
+
+   Regra que atravessa toda a folha:
+     o texto curto fica a descoberto; o texto longo fica dentro de um
+     <details>. Nao se apaga conteudo — muda-se o que se ve sem clicar.
+     (o componente em si vive em css/leitura.css)
+
+   Base de referencia (medida, ver docs-referencia-design.md):
+     - GOV.UK ......... nunca mais de 75 caracteres por linha; foco visivel
+     - ICC ............ serif editorial (Gellix) + contentor 1023 px
+     - Singapore Customs ... Inter, 1240 px
+     - Australia ...... 1186 custom properties; rem
+     - 9 sites de governo: zero modo escuro, zero clamp()
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. PALETA
+   A identidade (azul-marinho + vermelho) mantem-se: e o que diferencia a CDA.
+   O que muda e a Gama. O vermelho deixa de ser um acento decorativo e passa a ter
+   uma funcao editorial clara.
+   -------------------------------------------------------------------------- */
+:root {
+  /* --- azuis --- */
+  --az-900: #0d1a26;
+  --az-800: #12222f;
+  --az-700: #1a2e3f;
+  --az-600: #24415a;
+  --az-500: #33587a;
+
+  /* --- vermelho institucional --- */
+  /* Vermelho da marca. O sitio ja tem --red: #c01818 em estilo.css (56 usos).
+     Antes aqui havia #c81f1f, que e o mesmo vermelho com outro tom: dois
+     vermelhos para a mesma instituicao. --vm-500 passa a ser --red, para
+     haver UMA cor de marca em todo o portal. Os dois tons seguintes sao
+     escurecimento/aclaramento desse mesmo vermelho para hover e para texto
+     sobre fundo escuro. O tools/auditar.mjs verifica esta igualdade. */
+  --vm-500: var(--red, #c01818);
+  --vm-600: #a31414;
+  --vm-400: #d95656;
+
+  /* --- neutros quentes: menos "frio de hospital" --- */
+  --branco: #ffffff;
+  --areia: #faf8f5;
+  --areia-2: #f3efe9;
+  --pedra: #e4ddd2;
+  --tinta: #14202b;
+  --tinta-2: #3d4c59;
+  --tinta-3: #64737f;
+  --linha: #e2dbd1;
+
+  /* --- tipografia --- */
+  --serif: "Gellix", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --sans-calc: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* --- escala fluida --- */
+  --e-hero: clamp(2.6rem, 1.5rem + 4.6vw, 5.4rem);
+  --e-h1: clamp(2rem, 1.45rem + 2.4vw, 3.3rem);
+  --e-h2: clamp(1.5rem, 1.25rem + 1.1vw, 2.2rem);
+  --e-h3: clamp(1.12rem, 1.04rem + 0.35vw, 1.32rem);
+  --e-lead: clamp(1.06rem, 1rem + 0.32vw, 1.28rem);
+  --e-body: 1.0625rem;
+  --e-small: 0.9rem;
+  --e-micro: 0.78rem;
+
+  /* --- medidas --- */
+  --leitura: 66ch;          /* GOV.UK: <= 75 caracteres */
+  --leitura-larga: 78ch;
+  --contentor: 1240px;      /* Singapore Customs: 1240 */
+  --gutter: clamp(1.15rem, 0.6rem + 2.4vw, 2.75rem);
+
+  /* --- ritmo vertical: mais ar, menos ruido --- */
+  --r-s: 4px;
+  --r-m: 8px;
+  --r-l: 16px;
+
+  --sombra-1: 0 1px 2px rgba(20, 32, 43, .05), 0 2px 8px rgba(20, 32, 43, .05);
+  --sombra-2: 0 4px 12px rgba(20, 32, 43, .08), 0 12px 32px rgba(20, 32, 43, .07);
+  --sombra-3: 0 18px 50px rgba(13, 26, 38, .18);
+
+  --transicao: 220ms cubic-bezier(.2, .7, .3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE
+   -------------------------------------------------------------------------- */
+body {
+  font-family: var(--sans);
+  font-size: var(--e-body);
+  line-height: 1.62;
+  color: var(--tinta);
+  background: var(--branco);
+  overflow-x: hidden;
+}
+
+.container { max-width: var(--contentor); margin-inline: auto; padding-inline: var(--gutter); }
+
+h1, h2, h3, h4 { font-family: var(--sans); color: var(--az-900); letter-spacing: -.022em; }
+
+a { color: var(--az-600); }
+a:hover { color: var(--vm-600); }
+
+::selection { background: var(--az-700); color: #fff; }
+
+/* ==========================================================================
+   3. HERO — a fotografia e a protagonista
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(520px, 74vh, 780px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  background: var(--az-900);
+  overflow: hidden;
+}
+
+/* --- slideshow --- */
+.hero-slides { position: absolute; inset: 0; z-index: 0; }
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1100ms ease;
+}
+
+.hero-slide.is-on { opacity: 1; }
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--foco, center);
+  /* leve zoom, so no slide activo: dá vida sem distrair */
+  transform: scale(1.02);
+  transition: transform 7s ease-out;
+}
+
+.hero-slide.is-on img { transform: scale(1.09); }
+
+/* --- degradê: garante contraste AA do texto sobre qualquer fotografia --- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(8, 17, 25, .94) 0%, rgba(8, 17, 25, .72) 32%, rgba(8, 17, 25, .28) 62%, rgba(8, 17, 25, .5) 100%),
+    linear-gradient(to right, rgba(8, 17, 25, .8) 0%, rgba(8, 17, 25, .3) 55%, rgba(8, 17, 25, 0) 80%);
+}
+
+/* --- conteudo --- */
+.hero-inner { position: relative; z-index: 2; width: 100%; padding-block: clamp(2.5rem, 6vh, 4.5rem) 0; }
+
+.hero-copy { max-width: 34ch; }
+
+.hero .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  margin-bottom: 1.4rem;
+  color: var(--vm-400);
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.hero .pill::before {
+  content: "";
+  width: 2.4em;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: var(--e-hero);
+  line-height: .98;
+  letter-spacing: -.035em;
+  font-weight: 800;
+  margin: 0 0 1.1rem;
+  text-wrap: balance;
+}
+
+.hero h1 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  color: #fff;
+}
+
+.hero-copy .lead {
+  max-width: 46ch;
+  font-size: var(--e-lead);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, .84);
+  margin: 0 0 1.9rem;
+}
+
+/* --- pesquisa: o elemento funcional do hero --- */
+.hero-search {
+  display: flex;
+  max-width: 30rem;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 999px;
+  padding: .3rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color var(--transicao), background var(--transicao);
+}
+
+.hero-search:focus-within { border-color: rgba(255, 255, 255, .75); background: rgba(255, 255, 255, .16); }
+
+.hero-search input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: .78rem 1.15rem;
+  color: #fff;
+  font: inherit;
+  font-size: .96rem;
+}
+
+.hero-search input::placeholder { color: rgba(255, 255, 255, .62); }
+
+.hero-search button {
+  border: 0;
+  background: var(--vm-600);
+  color: #fff;
+  padding: .78rem 1.5rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transicao);
+}
+
+.hero-search button:hover { background: var(--vm-500); }
+
+/* --- rodape do hero: legenda do slide + navegacao --- */
+.hero-foot {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(2.5rem, 6vh, 4.5rem);
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(8, 17, 25, .5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-foot .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: .9rem;
+}
+
+.hero-foot-label {
+  display: block;
+  /* Branco: 5.01:1 sobre o vermelho da barra (#D8232A). O --vm-400 dava
+     1.29:1 — o texto ficava praticamente invisivel. */
+  color: #fff;
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+}
+
+.hero-foot-cap b {
+  display: block;
+  color: #fff;
+  font-size: .98rem;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 52ch;
+}
+
+.hero-foot-cap a { color: rgba(255, 255, 255, .72); font-size: var(--e-small); }
+.hero-foot-cap a:hover { color: #fff; }
+.hero-foot-cap span { display: block; }
+
+.hero-foot-nav { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
+
+.hero-foot-nav button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: background var(--transicao), border-color var(--transicao);
+}
+
+.hero-foot-nav button:hover { background: var(--vm-600); border-color: var(--vm-600); }
+
+.hero-dots { display: flex; gap: .4rem; padding-inline: .35rem; }
+
+.hero-dots button {
+  width: 1.9rem;
+  height: 3px;
+  border: 0;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .32);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transicao), width var(--transicao);
+}
+
+.hero-dots button[aria-selected="true"] { background: var(--vm-400); width: 2.6rem; }
+.hero-dots button:hover { background: rgba(255, 255, 255, .7); }
+
+/* ==========================================================================
+   4. FAIXA DE NOTICIAS
+   ========================================================================== */
+.flash-cda { background: var(--az-900); color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+
+.flash-inner { display: flex; align-items: stretch; min-height: 3.1rem; }
+
+.flash-label {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 1.15rem;
+  margin-right: 1.15rem;
+  border-right: 1px solid rgba(255, 255, 255, .16);
+  /* Branco: 5.01:1 sobre o vermelho da barra (--cta-red #D8232A). O
+     --vm-400 dava 1.29:1 — o rotulo ficava praticamente invisivel. */
+  color: #fff;
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.flash-track { flex: 1; overflow: hidden; display: flex; align-items: center; }
+.flash-track a { color: rgba(255, 255, 255, .88); font-size: var(--e-small); text-decoration: none; }
+.flash-track a:hover { color: #fff; text-decoration: underline; }
+
+/* ==========================================================================
+   5. GRELHA PRINCIPAL
+   ========================================================================== */
+.layout-cta { display: grid; grid-template-columns: minmax(0, 1fr) 336px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+.col-main { min-width: 0; }
+.col-side { min-width: 0; position: sticky; top: 6.5rem; }
+
+@media (max-width: 1000px) {
+  .layout-cta { grid-template-columns: 1fr; }
+  .col-side { position: static; }
+}
+
+/* --- cabecalho de seccao --- */
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.6rem; }
+
+.section-head .sub {
+  display: block;
+  color: var(--vm-600);
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+
+.section-head h2 { font-size: var(--e-h2); line-height: 1.1; margin: 0; max-width: 22ch; }
+
+.section-head .more {
+  flex-shrink: 0;
+  color: var(--az-700);
+  font-size: var(--e-small);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--pedra);
+  padding-bottom: .15rem;
+  transition: color var(--transicao), border-color var(--transicao);
+}
+
+.section-head .more:hover { color: var(--vm-600); border-color: var(--vm-600); }
+
+/* ==========================================================================
+   6. NOTICIAS — editorial, nao grelha de cartoes iguais
+   ========================================================================== */
+
+/* --- destaque: fotografia grande + texto --- */
+.news-destaque {
+  display: grid;
+  grid-template-columns: 1.28fr 1fr;
+  gap: 0;
+  margin-bottom: 2.6rem;
+  border-radius: var(--r-l);
+  overflow: hidden;
+  background: var(--az-900);
+  box-shadow: var(--sombra-2);
+}
+
+@media (max-width: 760px) { .news-destaque { grid-template-columns: 1fr; } }
+
+.news-destaque__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+.news-destaque__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center); transition: transform 900ms cubic-bezier(.2, .7, .3, 1); }
+.news-destaque:hover .news-destaque__media img { transform: scale(1.045); }
+
+.news-destaque__body { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.6rem, 3vw, 2.6rem); color: #fff; }
+
+.news-destaque__cat {
+  display: inline-block;
+  color: var(--vm-400);
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: .7rem;
+}
+
+.news-destaque__body h3 {
+  color: #fff;
+  font-size: var(--e-h2);
+  line-height: 1.12;
+  letter-spacing: -.028em;
+  margin: 0 0 .7rem;
+  text-wrap: balance;
+}
+
+.news-destaque__body p { color: rgba(255, 255, 255, .76); font-size: var(--e-small); line-height: 1.55; margin: 0 0 1.3rem; max-width: 44ch; }
+
+.news-destaque__meta { display: block; color: rgba(255, 255, 255, .5); font-size: var(--e-micro); letter-spacing: .07em; text-transform: uppercase; margin-bottom: 1.2rem; }
+
+.leia-mais {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  color: #fff;
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: .3rem;
+  border-bottom: 1.5px solid var(--vm-400);
+  transition: gap var(--transicao);
+}
+
+.leia-mais:hover { gap: .85em; color: #fff; }
+
+/* --- lista: linha editorial, fotografia pequena --- */
+.news-lista { display: flex; flex-direction: column; }
+
+.news-item {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 1.35rem;
+  align-items: start;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--linha);
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transicao);
+}
+
+.news-item:first-child { border-top: 1px solid var(--linha); }
+
+@media (max-width: 560px) { .news-item { grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; } }
+
+.news-item__media { aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--r-m); background: var(--areia-2); }
+.news-item__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center); transition: transform 600ms cubic-bezier(.2, .7, .3, 1); }
+.news-item:hover .news-item__media img { transform: scale(1.06); }
+
+.news-item__cat { color: var(--vm-600); font-size: var(--e-micro); font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+
+.news-item h4 { font-size: 1.04rem; line-height: 1.32; margin: .3rem 0 .35rem; color: var(--az-900); text-wrap: balance; transition: color var(--transicao); }
+.news-item:hover h4 { color: var(--vm-600); }
+
+.news-item p { margin: 0 0 .5rem; color: var(--tinta-3); font-size: var(--e-small); line-height: 1.5; max-width: 62ch; }
+
+.news-item time { color: var(--tinta-3); font-size: var(--e-micro); letter-spacing: .06em; text-transform: uppercase; }
+
+/* ==========================================================================
+   7. FAIXA DE NÚMEROS
+   ========================================================================== */
+.faixa-numeros { background: var(--az-800); color: #fff; }
+
+.faixa-numeros .container { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 860px) { .faixa-numeros .container { grid-template-columns: repeat(2, 1fr); } }
+
+.numero { padding: clamp(2.2rem, 5vw, 3.6rem) 1.5rem; border-left: 1px solid rgba(255, 255, 255, .1); }
+.numero:first-child { border-left: 0; }
+
+.numero strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 1.5rem + 3.2vw, 4rem);
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: .5rem;
+}
+
+.numero span { display: block; color: rgba(255, 255, 255, .62); font-size: var(--e-micro); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; line-height: 1.4; }
+
+/* ==========================================================================
+   8. COLUNA LATERAL
+   ========================================================================== */
+.side-bloco { margin-bottom: 2.1rem; }
+
+.side-bloco__h {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .9rem;
+  color: var(--az-900);
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.side-bloco__h::after { content: ""; flex: 1; height: 1px; background: var(--linha); }
+
+.side-list { list-style: none; margin: 0; padding: 0; }
+
+.side-list a {
+  display: block;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--linha);
+  color: var(--tinta);
+  text-decoration: none;
+  font-size: .93rem;
+  line-height: 1.4;
+  font-weight: 600;
+  transition: color var(--transicao), padding-left var(--transicao);
+}
+
+.side-list a:hover { color: var(--vm-600); padding-left: .35rem; }
+.side-list a small { display: block; color: var(--tinta-3); font-weight: 500; font-size: var(--e-micro); margin-top: .12rem; }
+.side-list li:last-child a { border-bottom: 0; }
+
+/* --- acesso rapido: lista de acoes, nao cartoes --- */
+.acesso-rapido { display: grid; gap: .5rem; }
+
+.acesso-rapido a {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .78rem .95rem;
+  background: var(--areia);
+  border: 1px solid var(--linha);
+  border-radius: var(--r-m);
+  color: var(--az-800);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 700;
+  transition: background var(--transicao), border-color var(--transicao), transform var(--transicao);
+}
+
+.acesso-rapido a:hover { background: var(--branco); border-color: var(--az-500); transform: translateX(3px); color: var(--az-800); }
+.acesso-rapido a::before { content: "→"; color: var(--vm-600); font-weight: 800; flex-shrink: 0; }
+
+/* --- newsletter --- */
+.newsletter-form { display: flex; gap: .4rem; }
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  padding: .68rem .85rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--r-m);
+  background: var(--branco);
+  font: inherit;
+  font-size: .9rem;
+  color: var(--tinta);
+  outline: 0;
+  transition: border-color var(--transicao);
+}
+
+.newsletter-form input:focus { border-color: var(--az-600); }
+
+.w-btn {
+  padding: .68rem 1.05rem;
+  background: var(--az-800);
+  border: 0;
+  border-radius: var(--r-m);
+  color: #fff;
+  font: inherit;
+  font-size: var(--e-micro);
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transicao);
+}
+
+.w-btn:hover { background: var(--vm-600); }
+
+/* --- "pergunte a CDA" --- */
+.pergunte { background: var(--areia); border: 1px solid var(--linha); border-radius: var(--r-m); padding: 1.15rem; }
+.pergunte h4 { font-size: 1rem; margin: 0 0 .35rem; }
+.pergunte p { font-size: var(--e-small); color: var(--tinta-2); margin: 0 0 .9rem; line-height: 1.5; }
+.pergunte .w-btn { width: 100%; }
+
+/* ==========================================================================
+   9. PARCEIROS — faixa contínua
+   --------------------------------------------------------------------------
+   Três problemas medidos, não supostos:
+
+   1. DESCOLORAÇÃO. As logos tinham `filter: grayscale(1)` e `opacity: .58`,
+      pelo que a faixa passava a cinzento e apagado. Pedido explícito para
+      remover. Agora vão a cor, e o destaque faz-se pelo gesto e pela
+     движения — não por desbotar tudo.
+
+   2. SALTO DE 28 px AO REINICIAR. A pista usava `gap: 3.5rem` e a animação
+      terminava em `translateX(-50%)`. Com `gap`, metade da pista ficava
+      28 px mais larga do que o conjunto original (medido: 2885 px contra
+      2857 px), por isso o ciclo reiniciava com um soluço. Agora não há `gap`:
+      o espaço vive dentro de cada item (`padding-right`), e as duas metades
+      têm exactamente a mesma largura — o fecho é perfeito.
+
+   3. BURACOS NA FAIXA. As imagens tinham `loading="lazy"` numa pista com
+      5785 px de largura: 0 de 13 carregavam antes de fazer scroll e 12 de 13
+      depois — a 13.ª nunca chegava a entrar na janela de carregamento. O
+      resultado eram espaços vazios a meio da animação. As 13 logos pesavam
+      534 KB; depois de recortar e reduzir (mantendo o rácio) pesam 89 KB, o
+      que torna aceitável carregá-las de imediato.
+   ========================================================================== */
+.sec-parceiros { background: var(--areia); border-block: 1px solid var(--linha); padding-block: clamp(2.4rem, 4.5vw, 3.6rem); }
+
+.parceiros-topo { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.2rem; margin-bottom: 1.9rem; }
+.parceiros-topo h2 { font-size: var(--e-h3); margin: 0; }
+.parceiros-topo .parceiros-legenda { margin: .3rem 0 0; font-size: var(--e-micro); color: var(--tinta-3); letter-spacing: .04em; }
+
+.parceiros-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+/* gap: 0 explicito. Sem isto, qualquer regra legada que fixe um gap na
+   pista volta a partir o fecho do loop em translateX(-50%) — foi
+   exactamente o que aconteceu enquanto a regra antiga vivia em estilo.css. */
+.parceiros-track { display: flex; align-items: center; gap: 0; width: max-content; animation: desliza 46s linear infinite; will-change: transform; }
+
+/* O espaço entre itens é padding, não gap — ver nota 2 acima. */
+.parceiros-item {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding-right: 3.2rem;
+  /* alvo de toque comfortable (WCAG 2.2 AA 2.5.8 pede 24x24) */
+  min-height: 44px;
+}
+.parceiros-item-img { height: 46px; width: auto; max-width: 210px; object-fit: contain; }
+.parceiros-item-nome {
+  font-size: var(--e-micro);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--tinta-3);
+  white-space: nowrap;
+  transition: color var(--transicao);
+}
+.parceiros-item:hover .parceiros-item-img { transform: scale(1.07); }
+.parceiros-item:hover .parceiros-item-nome { color: var(--tinta); }
+.parceiros-item-img { transition: transform var(--transicao); }
+
+.parceiros-btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .5rem .9rem;
+  background: transparent;
+  border: 1px solid var(--pedra);
+  border-radius: 999px;
+  color: var(--tinta-2);
+  font: inherit;
+  font-size: var(--e-micro);
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transicao), border-color var(--transicao), color var(--transicao);
+}
+.parceiros-btn:hover { background: var(--branco); border-color: var(--tinta-3); color: var(--tinta); }
+
+/* Pausa ao passar o rato: menos distracção sem tirar o movimento. */
+.parceiros-marquee:hover .parceiros-track,
+.parceiros-marquee:focus-within .parceiros-track { animation-play-state: paused; }
+
+.parceiros-track.parceiros-parado { animation-play-state: paused; }
+
+@keyframes desliza { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Sem movimento automático, a faixa passa a ser rolável com o dedo, e o
+   botão acima passa a ser o que decide se volta a correr. O WCAG 2.2.2
+   (Pausar, Parar, Esconder) exige um mecanismo para travar conteúdo em
+   movimento, e sem esta variante o utilizador ficava sem forma de o fazer. */
+@media (prefers-reduced-motion: reduce) {
+  .parceiros-track { animation: none; }
+  .parceiros-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scrollbar-width: thin; }
+  .parceiros-marquee:hover .parceiros-track { animation-play-state: running; }
+}
+
+/* ==========================================================================
+   9b. GRELHA DE PARCEIROS (pagina parceiros.html)
+   --------------------------------------------------------------------------
+   Estava como `style="grid-template-columns:repeat(2,1fr)"` no HTML, o que
+   forçava duas colunas mesmo a 375 px. Com duas colunas, um cartão tem
+   ~165 px de largura, e `max-width: 90%` da imagem passava a ser o
+   limite antes da altura: a WCO (346x51, rácio 6,8:1) ficava com 17 px de
+   altura ao lado de um emblem quadrado com 48 px. Media vez a mesma
+   instituição com aspecto muito diferente, media 21-48 px de altura.
+   Com colunas que crescem conforme o espaço, as alturas convergem.
+   ========================================================================== */
+.parceiros-grelha { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.parceiro-logo { width: 100%; }
+.parceiro-logo img { max-width: 100%; }
+
+/* ==========================================================================
+   10. FAIXA DE ACÇÃO
+   ========================================================================== */
+.banner-ads {
+  display: block;
+  background: var(--az-800);
+  color: #fff;
+  text-decoration: none;
+  transition: background var(--transicao);
+}
+
+.banner-ads:hover { background: var(--az-700); color: #fff; }
+.banner-ads .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: clamp(1.6rem, 3vw, 2.4rem); }
+.banner-ads b { display: block; font-size: var(--e-h3); font-weight: 800; letter-spacing: -.02em; }
+.banner-ads span { color: rgba(255, 255, 255, .68); font-size: var(--e-small); }
+.banner-ads .cta-seta { font-size: 1.4rem; color: var(--vm-400); flex-shrink: 0; transition: transform var(--transicao); }
+.banner-ads:hover .cta-seta { transform: translateX(6px); }
+
+/* ==========================================================================
+   11. RODAPÉ
+   ========================================================================== */
+.footer { background: var(--az-900); color: rgba(255, 255, 255, .64); font-size: .9rem; }
+.footer h4 { color: #fff; font-size: var(--e-micro); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 .9rem; }
+.footer a { color: rgba(255, 255, 255, .68); text-decoration: none; }
+.footer a:hover { color: #fff; text-decoration: underline; }
+.footer .cols { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; padding-block: clamp(2.6rem, 5vw, 4rem); }
+@media (max-width: 860px) { .footer .cols { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .footer .cols { grid-template-columns: 1fr; } }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.footer .bottom { border-top: 1px solid rgba(255, 255, 255, .12); padding-block: 1.2rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: var(--e-micro); color: rgba(255, 255, 255, .45); }
+
+/* ==========================================================================
+   12. RESPONSIVIDADE — verificado nos larguras que o pedido indica
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .hero { min-height: 460px; }
+  .hero h1 { letter-spacing: -.028em; }
+  .hero .container { padding-inline: 1.15rem; }
+  .hero-foot .container { flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .hero-foot-nav { align-self: flex-end; }
+  .flash-label { font-size: .68rem; padding-right: .7rem; margin-right: .7rem; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form .w-btn { width: 100%; }
+}
+
+@media (max-width: 400px) {
+  .hero { min-height: 420px; }
+  .hero-search { flex-direction: column; border-radius: var(--r-m); }
+  .hero-search button { width: 100%; }
+  .numero { padding-inline: 1rem; }
+  .news-item { grid-template-columns: 78px minmax(0, 1fr); }
+  .news-item p { display: none; }   /* no ecra mais pequeno, so titulo + imagem */
+}
+
+/* ==========================================================================
+   13. PREFERÊNCIAS DO UTILIZADOR
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+  .hero, .hero-foot, .flash-cda, .banner-ads, .parceiros-marquee { display: none !important; }
+  body { color: #000; background: #fff; }
+  .news-destaque { box-shadow: none; border: 1px solid #999; }
+}
+
+/* ==========================================================================
+   UTILITARIOS
+   ========================================================================== */
+
+/* Texto só para leitores de ecrã (pesquisa do hero, títulos de secção).
+   Não é display:none — um leitor de ecrã não anuncia display:none, o que
+   deixaria o campo de pesquisa sem etiqueta. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   DELEGACOES NA HOME
+   Reaproveita .delegacoes.compacta / .delegacao de estilo.css. Aqui so se
+   ajusta o que muda: sao links (para a pagina da instituicao) e nao divs, e
+   o objectivo e parecer um indice, nao um bloco de texto.
+   ========================================================================== */
+.delegacoes-home .delegacao {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.delegacoes-home .delegacao:hover,
+.delegacoes-home .delegacao:focus-visible {
+  transform: translateY(-3px);
+  border-top-color: var(--vm-600);
+  box-shadow: 0 8px 22px rgba(13, 26, 38, .10);
+}
+
+/* A seta aparece so no hover/foco — sinaliza que o cartao e clicavel sem
+   poluir o repouso com tres icones iguais. */
+.delegacoes-home .delegacao::after {
+  content: "→";
+  display: block;
+  margin-top: 10px;
+  color: var(--vm-600);
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.delegacoes-home .delegacao:hover::after,
+.delegacoes-home .delegacao:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delegacoes-home .delegacao,
+  .delegacoes-home .delegacao::after {
+    transition: none;
+  }
+  .delegacoes-home .delegacao:hover,
+  .delegacoes-home .delegacao:focus-visible {
+    transform: none;
+  }
+}
+
+/* Espacamento vertical do bloco principal e da secção de delegações.
+   Vai aqui, e não em style="...", para se ajustar num único sítio. */
+.content-alto {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.delegacoes-home {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+/* Notícia sem fotografia: o espaço da miniatura é reservado para as linhas da
+   lista continuarem alinhadas, mas sem moldura nem fundo falso. */
+.news-item__media--vazia {
+  background: none;
+  border: 0;
+}
+
+/* ==========================================================================
+   RESULTADOS DA PESQUISA
+   Aparece entre o hero e o conteudo principal, so quando ha consulta.
+   ========================================================================== */
+.pesquisa-resultados {
+  padding: clamp(2rem, 4vw, 3rem) 0 0;
+  background: var(--branco, #fff);
+  border-bottom: 1px solid var(--linha, #e3e8ee);
+  animation: sobe .22s ease both;
+}
+
+.pesquisa-grupo {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.05rem;
+  color: var(--azul-900, #0d1a26);
+  margin: 1.4rem 0 .5rem;
+}
+
+.pesquisa-grupo:first-child { margin-top: 0; }
+
+.pesquisa-itens {
+  list-style: none;
+  margin: 0 0 .5rem;
+  padding: 0;
+  border-top: 1px solid var(--linha, #e3e8ee);
+}
+
+.pesquisa-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .35rem 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--linha, #e3e8ee);
+}
+
+.pesquisa-item a {
+  font-weight: 600;
+  color: var(--azul-900, #0d1a26);
+  text-decoration: none;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Sublinhado so no alvo, nunca no rato inteiro — a lista fica legivel. */
+.pesquisa-item a:hover,
+.pesquisa-item a:focus-visible {
+  color: var(--vm-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pesquisa-item-meta {
+  flex: 0 0 auto;
+  font-size: .8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #5b6a78;
+}
+
+.pesquisa-vazia {
+  margin: .5rem 0 0;
+  color: #3d4a57;
+  max-width: 62ch;
+}
+
+#pesquisa-limpar {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--vm-600);
+  cursor: pointer;
+}
+
+#pesquisa-limpar:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 560px) {
+  .pesquisa-item { flex-direction: column; }
+  .pesquisa-item-meta { font-size: .72rem; }
+}
+
+/* ==========================================================================
+   BARRA LATERAL — blocos expansiveis
+   A coluna ja e secundaria: "Documentos" e "Eventos" ficam fechados por
+   omissao (o utilizador abre so o que lhe interessa) e o titulo mantem-se
+   sempre visivel, para saber que ha ali conteudo.
+   ========================================================================== */
+.side-detalhe > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-bottom: .75rem;
+  /* O alvo media 338x20 — largo mas com 4px a menos dos 24px que o WCAG
+     2.2 AA (2.5.8) exige. O padding em bloco resolve sem mudar o aspero do
+     titulo, porque o flex ja centra o conteudo. */
+  padding-block: 3px;
+}
+
+/* Oculta o marcador nativo em Firefox e WebKit, mantendo o item focusavel. */
+.side-detalhe > summary::-webkit-details-marker { display: none; }
+
+.side-detalhe > summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--vm-600);
+  transition: transform .18s ease;
+}
+
+.side-detalhe[open] > summary::after { content: "\2212"; }
+
+.side-detalhe > summary:hover { color: var(--vm-600); }
+
+.side-detalhe > summary:focus-visible {
+  outline: 3px solid var(--vm-600);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side-detalhe > summary::after { transition: none; }
+}

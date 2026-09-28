@@ -1,0 +1,6 @@
+Total páginas analisadas: 121
+  pagina: 67
+  noticia: 9
+  documento: 45
+Total links de documentos (?download=): 52
+Domínios externos distintos: 14
