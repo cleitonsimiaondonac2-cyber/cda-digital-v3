@@ -1,64 +1,70 @@
-# 📋 Resumo Executivo: Visibilidade Mediática e Reputacional da CDA (2022–2026)
+# 📋 Resumo Executivo: Visibilidade Institucional da CDA (2022–2026)
 
 ---
 
-## Achados Principais
+## Destaques Positivos
 
-### 1. Ameaça Existencial (2022–2023)
-- **Proposta de não-obrigatoriedade** ameaçou a profissão de despachante
+### 1. Defesa dos Interesses dos Despachantes (2022–2023)
+- **Participação activa** no debate nacional sobre reforma aduaneira
+- **Argumentação técnica** sobre a importância do despachante para a segurança fiscal
+- **Referência internacional** a boas práticas em Angola e Portugal
 - **Fontes:** Diário Económico, O País, MIC, MZNews
-- **Argumentos do governo:** Reduzir custos, combater contrabando, cumprir OMC
-- **Argumentos da CDA:** Riscos fiscais, perda de 1000 empregos, experiências internacionais
 
-### 2. Casos de Fraude (Impacto Reputacional Grave)
-| Caso | Data | Montante | Fontes |
-|------|------|----------|--------|
-| Hussen Gulam Mahomed | Jul 2025 | Milhões USD | AIM, RTP, Carta MZ, Savana |
-| Terminal de Carga Aeroporto | Jan 2021 | 11M MZN | Carta de Moçambique |
-| Terminal Marítimo | Jan 2022 | 18,6M USD | Deutsche Welle |
+### 2. Cooperação e Formação
+| Actividade | Data | Fonte |
+|-----------|------|-------|
+| Formação Regras de Origem | Abr 2025 | MZNews |
+| Workshop branqueamento de capitais | 2024 | CDA |
+| Grupo de trabalho CTA | 2022–2023 | CTA |
 
-**Padrão recorrente:** Despachantes mencionados como "auxílio" em esquemas de fraude fiscal e branqueamento de capitais.
+### 3. Parcerias Estratégicas
+- **ASAPRA** — Integração portuária e logística
+- **IFCBA** — Federação internacional, intercâmbio e boas práticas
+- **CTA** — Representação política e advocacy
+- **CCM** — Networking e oportunidades de negócio
+- **MDR Advogados** — Formação jurídica
 
-### 3. Protestos e Insatisfação (2025)
-- **30 Jun 2025:** 50+ empreendedores protestaram no Aeroporto de Maputo
-- **Motivo:** Aumento de tarifas (8.000 → 15.000 MZN/mala)
-- **Impacto:** Despachantes vistos como "burocracia cara"
-- **Fontes:** SAPO, Observador, Notícias ao Minuto
+### 4. Modernização Digital
+- **Janela Única Electrónica (JUE)** — Eficiência e transparência
+- **Decreto n.º 37/2023** — Actualização do enquadramento legal
+- **Formação contínua** — JUE, RGDA, deontologia profissional
 
----
+### 5. Marcos Institucionais
+| Marco | Data |
+|-------|------|
+| Eleição Salmate Chuaibo (primeira presidente mulher) | 2024 |
+| XXVI Assembleia Geral Ordinária | 2024 |
+| Tomada de Posse (mandato 2024–2026) | 2024 |
+| Formação Regras de Origem com AT | Abr 2025 |
 
-## Quadro de Percepção Mediática
-
-| Fonte | Percepção da CDA | Impacto |
-|-------|------------------|---------|
-| Imprensa geral | Adversário do governo, burocracia | Negativo |
-| Investigação judicial | Associada a fraude e corrupção | Muito negativo |
-| Redes sociais | "Profissão corrupta" | Negativo |
-| Comunicação institucional | Profissional, moderna | Positivo |
-| Protestos | Burocracia cara e desnecessária | Negativo |
-
----
-
-## Consequências Directas para Despachantes
-
-### Económicas
-- Risco de despedimento (1000 empregos)
-- Incerteza profissional
-- Pressão sobre tarifas
-- Concorrência potencial
-
-### Reputacionais
-- Associação a fraude fiscal
-- Percepção pública negativa
-- Desconfiança dos clientes
-- Pressão política
+### 6. Números do Sector
+| Indicador | Valor |
+|-----------|-------|
+| Escritórios registados | 235 |
+| Escritórios em operação | ~200 |
+| Profissionais empregados | ~2000 |
+| Portos de operação | Maputo, Beira, Nacala |
 
 ---
 
-## Recomendações
+## Valor do Despachante Aduaneiro
 
-1. **Reforçar comunicação institucional** — destacar formação, ética e cooperação com AT
-2. **Distanciar-se de casos de fraude** — comunicar que indivíduos não representam a classe
-3. **Monitorizar redes sociais** — responder a críticas com factos e dados
-4. **Fortalecer parcerias** — AT, CTA, ASAPRA, IFCBA, CCM
-5. **Promover benefícios do serviço** — eficiência, redução de riscos, poupança de tempo
+| Benefício | Descrição |
+|----------|----------|
+| Eficiência | Redução de tempos e custos operacionais |
+| Segurança | Conhecimento profundo da legislação |
+| Conformidade | Cumprimento fiscal e aduaneiro garantido |
+| Rastreabilidade | Documentação completa e transparente |
+| Poupança | Evita multas, atrasos e perdas |
+
+---
+
+## Presença Mediática Positiva
+
+| Fonte | Conteúdo |
+|-------|----------|
+| MZNews | Formação Regras de Origem (2025) |
+| Diário Económico | Debate construtivo sobre reforma (2023) |
+| O País | CDA e AT em diálogo (2022) |
+| Instagram (CDA) | Eventos e formação |
+| CTA | Dia dos Despachantes (2026) |
