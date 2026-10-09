@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "nome": "Gama Afonso",
+    "mandato": "2011–2014",
+    "foto": "img/presidentes/gama-afonso.jpg",
+    "descricao": "Primeiro Presidente da CDA. Liderou o processo de constituição formal da Câmara dos Despachantes Aduaneiros de Moçambique.",
+    "feitos": [
+      "Constituição formal da CDA",
+      "Primeiras estruturas administrativas",
+      "Primeiros órgãos sociais eleitos",
+      "Estabelecimento dos alicerces institucionais"
+    ],
+    "documentos": [
+      {"titulo": "Lei nº 4/2011", "url": "#"},
+      {"titulo": "Acta de Constituição", "url": "#"},
+      {"titulo": "Relatório de Actividades 2011-2014", "url": "#"}
+    ],
+    "fotos": [
+      "img/actividades/2011-eleicao.jpg",
+      "img/actividades/2012-assembleia.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Dixon Chongo",
+    "mandato": "2014–2023",
+    "foto": "img/presidentes/dixon-chongo.jpg",
+    "descricao": "Presidente durante o período de consolidação da CDA. Liderou a instituição por quase uma década.",
+    "feitos": [
+      "Consolidação da CDA como instituição",
+      "Expansão do número de membros",
+      "Criação de delegações regionais",
+      "Implementação de códigos de ética e conduta",
+      "Representação junto das autoridades aduaneiras"
+    ],
+    "documentos": [
+      {"titulo": "Regulamento Interno", "url": "#"},
+      {"titulo": "Código de Ética e Deontologia", "url": "#"},
+      {"titulo": "Relatórios Anuais 2014-2023", "url": "#"}
+    ],
+    "fotos": [
+      "img/actividades/2015-reuniao.jpg",
+      "img/actividades/2018-formacao.jpg",
+      "img/actividades/2020-assembleia.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Salmate Chuaibo Daud",
+    "mandato": "2024–2026",
+    "foto": "img/presidentes/salmate-chuaibo.jpg",
+    "descricao": "Presidente actual da CDA. Eleita para o triénio 2024-2026.",
+    "feitos": [
+      "Modernização dos processos internos",
+      "Lançamento do Portal Digital CDA V4",
+      "Reforço da transparência e prestação de contas",
+      "Expansão da cooperação internacional"
+    ],
+    "documentos": [
+      {"titulo": "Plano de Actividades 2024-2026", "url": "#"},
+      {"titulo": "Relatório de Gestão 2024", "url": "#"}
+    ],
+    "fotos": [
+      "img/actividades/2024-posse.jpg",
+      "img/actividades/2025-reuniao.jpg"
+    ]
+  }
+]

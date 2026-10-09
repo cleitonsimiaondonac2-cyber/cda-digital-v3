@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-titulo="Galeria">Galeria — Câmara dos Despachantes Aduaneiros de Moçambique</title>
-<meta name="description" content="Galeria de fotografias da Câmara dos Despachantes Aduaneiros de Moçambique: assembleias gerais, tomadas de posse e eventos da classe.">
+<title data-titulo="Denúncia de Fraude">Denúncia de Fraude — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+<meta name="description" content="Reporte irregularidades de forma segura e confidencial à Câmara dos Despachantes Aduaneiros.">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon-64.png" sizes="64x64">
   <link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="stylesheet" href="css/estilo.css">
 <link rel="stylesheet" href="css/cta.css">
 <link rel="stylesheet" href="css/leitura.css">
+<link rel="stylesheet" href="css/paginas.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +20,18 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_MZ">
 <meta property="og:site_name" content="Câmara dos Despachantes Aduaneiros de Moçambique">
-<meta property="og:title" content="Galeria — Câmara dos Despachantes Aduaneiros de Moçambique">
-<meta property="og:description" content="Galeria de fotografias da Câmara dos Despachantes Aduaneiros de Moçambique: assembleias gerais, tomadas de posse e eventos da classe.">
-<meta property="og:url" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/galeria.html">
+<meta property="og:title" content="Denúncia de Fraude — Câmara dos Despachantes Aduaneiros de Moçambique">
+<meta property="og:description" content="Reporte irregularidades de forma segura e confidencial à Câmara dos Despachantes Aduaneiros.">
+<meta property="og:url" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/denunciar.html">
 <meta property="og:image" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/img/og-cda.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Galeria — Câmara dos Despachantes Aduaneiros de Moçambique">
-<meta name="twitter:description" content="Galeria de fotografias da Câmara dos Despachantes Aduaneiros de Moçambique: assembleias gerais, tomadas de posse e eventos da classe.">
+<meta name="twitter:title" content="Denúncia de Fraude — Câmara dos Despachantes Aduaneiros de Moçambique">
+<meta name="twitter:description" content="Reporte irregularidades de forma segura e confidencial à Câmara dos Despachantes Aduaneiros.">
 <meta name="twitter:image" content="https://cleitonsimiaondonac2-cyber.github.io/cda-digital/img/og-cda.png">
 </head>
-<body data-page="galeria">
+<body data-page="contactos">
 
 <div class="topbar">
   <div class="container">
@@ -106,28 +107,127 @@
     <li class="nav-cta"><a class="btn-nav" href="area-membro.html">Área do Membro</a></li>
   </ul>
 </nav>
-</div>
+  </div>
 </header>
+
 
 <section class="page-hero">
   <div class="container">
-    <h1>Galeria</h1>
-    <p>Momentos da XXVI.ª Sessão da Assembleia Geral Ordinária e da tomada de posse dos órgãos sociais 2024–2026.</p>
+    <h1>Denúncia de Fraude</h1>
+    <p>Reporte irregularidades de forma segura e confidencial.</p>
   </div>
 </section>
 
-<div class="breadcrumb"><div class="container">Galeria</div></div>
+<div class="breadcrumb"><div class="container"><ol><li><a href="index.html">Início</a></li><li><a href="contactos.html">Contacto</a></li><li><span aria-current="page">Denúncia de fraude</span></li></ol></div></div>
 
 <section class="section">
   <div class="container">
-    <div class="galeria" id="galeria"></div>
+    <div class="grid grid--2">
+      <div>
+        <div class="card"><div class="card__body">
+          <span class="badge">Confidencial</span>
+          <h2>Denúncia segura e confidencial</h2>
+          <p>O sistema de denúncias da CDA garante o anonimato e a confidencialidade das informações fornecidas. A sua identidade é protegida e todas as denúncias são tratadas com a máxima seriedade.</p>
+          <ul class="stack text-muted">
+            <li>Protecção total da identidade</li>
+            <li>Investigação rápida e eficiente</li>
+            <li>Feedback sobre o andamento, sempre que possível</li>
+          </ul>
+          <div class="callout callout--warn mt-4">
+            <span class="callout__icon" aria-hidden="true">⚠️</span>
+            <div>
+              <p class="callout__title">Aviso</p>
+              <p>Esta é uma demonstração: os dados da denúncia são guardados apenas no seu navegador (localStorage) e não são enviados para nenhum servidor.</p>
+            </div>
+          </div>
+          <p class="mt-4">Comissão de Ética: <a href="mailto:etica@cda-mz.org">etica@cda-mz.org</a> · <a href="tel:+25821305504">+258 21 305 504</a></p>
+        </div></div>
+      </div>
+      <div>
+        <form id="report-form" class="stack" novalidate>
+          <h2>Formulário de denúncia</h2>
+          <div class="field">
+            <label class="label" for="report-tipo">Tipo de denúncia *</label>
+            <select class="select" id="report-tipo" name="tipo" required>
+              <option value="" disabled selected>Selecione o tipo</option>
+              <option value="fraude-documental">Fraude documental</option>
+              <option value="despacho-ilegal">Despacho ilegal</option>
+              <option value="suborno">Suborno</option>
+              <option value="falsificacao">Falsificação de documentos</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="label" for="report-urgencia">Nível de urgência *</label>
+            <select class="select" id="report-urgencia" name="urgencia" required>
+              <option value="" disabled selected>Selecione a urgência</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+              <option value="critica">Crítica</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="label" for="report-titulo">Título da denúncia *</label>
+            <input class="input" id="report-titulo" name="titulo" type="text" placeholder="Resuma a denúncia em poucas palavras" required>
+          </div>
+          <div class="field">
+            <label class="label" for="report-descricao">Descrição detalhada *</label>
+            <textarea class="textarea" id="report-descricao" name="descricao" rows="6" placeholder="Descreva a situação, incluindo datas, locais, pessoas envolvidas e outras informações relevantes…" required></textarea>
+          </div>
+          <div class="field">
+            <label class="label" for="report-data">Data do incidente</label>
+            <input class="input" id="report-data" name="data" type="date">
+          </div>
+          <div class="field">
+            <label class="label" for="report-local">Local do incidente</label>
+            <input class="input" id="report-local" name="local" type="text" placeholder="Local, cidade ou província">
+          </div>
+          <div class="field">
+            <label class="label">Documentos ou provas (opcional)</label>
+            <input class="input" id="report-doc" name="documentos" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple>
+            <p class="hint">Máximo 5 ficheiros, até 10MB cada.</p>
+          </div>
+          <div class="field">
+            <label class="label" for="report-contato-email">Informações de contacto (opcional)</label>
+            <input class="input mb-4" id="report-contato-email" name="contatoEmail" type="email" placeholder="Email">
+            <input class="input" id="report-contato-telefone" name="contatoTelefone" type="tel" placeholder="Telefone">
+          </div>
+          <div class="field">
+            <label class="label" for="report-anonimato" style="display:flex;gap:.5rem;align-items:center">
+              <input type="checkbox" id="report-anonimato" name="anonimato" checked>
+              Desejo manter-me anónimo
+            </label>
+            <p class="hint">Se seleccionar esta opção, as informações de contacto não serão associadas à denúncia.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <button class="btn btn--outline btn--lg" type="reset">Limpar</button>
+            <button class="btn btn--primary btn--lg" type="submit">Submeter denúncia</button>
+          </div>
+          <div id="report-resultado" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="lightbox" id="lightbox">
-  <button class="fechar" id="lb-fechar">✕</button>
-  <img id="lightbox-img" alt="Fotografia ampliada">
-</div>
+<section class="section section--subtle">
+  <div class="container">
+    <div class="grid grid--3">
+      <article class="card"><div class="card__body"><h3>Protecção de dados</h3><p>Todas as informações são tratadas com a máxima confidencialidade e protegidas pela legislação de protecção de dados de Moçambique.</p></div></article>
+      <article class="card"><div class="card__body"><h3>Investigação</h3><p>As denúncias são investigadas pela Comissão de Ética da CDA, em colaboração com as autoridades competentes quando necessário.</p></div></article>
+      <article class="card"><div class="card__body"><h3>Transparência</h3><p>A CDA compromete-se a manter os denunciantes informados sobre o resultado das investigações, sempre que possível.</p></div></article>
+    </div>
+    <div class="callout mt-6">
+      <span class="callout__icon" aria-hidden="true">§</span>
+      <div>
+        <p class="callout__title">Enquadramento legal</p>
+        <p>Lei n.º 4/2011 (criação da CDA) · Regulamento Interno da CDA · Código de Ética e Deontologia dos Despachantes Aduaneiros · Lei de Combate à Corrupção e demais legislação aplicável.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
@@ -179,28 +279,6 @@
 <script src="js/app.js"></script>
 <script src="js/leitura.js"></script>
 <script src="js/assistente.js"></script>
-<script>
-  (function () {
-    const g = document.getElementById("galeria");
-    const ficheiros = [
-      "01-01-100_thumb.jpg", "02-01-156_thumb.jpg", "03-01-184_thumb.jpg", "04-01-216_thumb.jpg",
-      "05-01-227_thumb.jpg", "06-01-238_thumb.jpg", "07-01-242_thumb.jpg", "08-01-311_thumb.jpg",
-      "09-01-359_thumb.jpg", "10-01-99_thumb.jpg", "11-screenshot-2024-10-29-130534_thumb.png",
-      "12-screenshot-2024-10-29-130947_thumb.png", "13-whatsapp-image-2024-11-11-at-15.21.14-1.jpg",
-      "14-whatsapp-image-2024-11-11-at-15.21.14-2.jpg", "15-whatsapp-image-2024-11-13-at-11.40.32.jpg",
-      "16-whatsapp-image-2024-11-17-at-11.34.52.jpg", "17-whatsapp-image-2024-11-17-at-11.34.57.jpg",
-      "18-whatsapp-image-2024-12-16-at-15.50.57-1.jpg", "19-whatsapp-image-2024-12-16-at-15.50.57.jpg",
-      "20-whatsapp-image-2024-12-16-at-15.56.29.jpg", "21-whatsapp-image-2024-12-16-at-15.56.44.jpg",
-      "22-whatsapp-image-2024-12-16-at-15.57.08.jpg"
-    ];
-    ficheiros.forEach((f) => {
-      const img = document.createElement("img");
-      img.src = "galeria/" + f;
-      img.alt = "Fotografia da galeria da CDA";
-      img.dataset.galeriasrc = img.src;
-      g.appendChild(img);
-    });
-  })();
-</script>
+<script src="js/denunciar.js"></script>
 </body>
 </html>

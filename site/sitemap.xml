@@ -98,4 +98,60 @@
     <priority>0.3</priority>
     <title>Área do Membro — Câmara dos Despachantes Aduaneiros de Moçambique</title>
   </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/historia.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <title>História da CDA — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/orgaos.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <title>Órgãos Sociais — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/estatutos.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <title>Estatutos da CDA — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/lideranca.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <title>Liderança — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/presidente-single.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <title>Presidente — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/verificar.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <title>Verificar Despachante — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/denunciar.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <title>Denúncia de Fraude — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
+  <url>
+    <loc>https://cleitonsimiaondonac2-cyber.github.io/cda-digital/pergunte.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <title>Pergunte à CDA — Câmara dos Despachantes Aduaneiros de Moçambique</title>
+  </url>
 </urlset>

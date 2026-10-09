@@ -1,0 +1,112 @@
+[
+  {
+    "id": "000100010912",
+    "nome": "Carlos F. Filomeno de Gama Afonso",
+    "cedula": "DESP / 001 / DGA / 03",
+    "estado": "REGISTADO",
+    "delegacao": "Maputo",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2011-09-16",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000200020913",
+    "nome": "Maria da Graça João",
+    "cedula": "DESP / 002 / DGA / 04",
+    "estado": "REGISTADO",
+    "delegacao": "Maputo",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2012-05-20",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000300030914",
+    "nome": "José Manuel da Silva",
+    "cedula": "DESP / 003 / DGA / 05",
+    "estado": "REGISTADO",
+    "delegacao": "Beira",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2013-01-10",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000400040915",
+    "nome": "Ana Paula Costa",
+    "cedula": "DESP / 004 / DGA / 06",
+    "estado": "REGISTADO",
+    "delegacao": "Nampula",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2014-03-15",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000500050916",
+    "nome": "Pedro Henriques",
+    "cedula": "DESP / 005 / DGA / 07",
+    "estado": "REGISTADO",
+    "delegacao": "Maputo",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2015-07-22",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000600060917",
+    "nome": "Sofia Rafael",
+    "cedula": "DESP / 006 / DGA / 08",
+    "estado": "REGISTADO",
+    "delegacao": "Matola",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2016-11-05",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000700070918",
+    "nome": "Ricardo Domingos",
+    "cedula": "DESP / 007 / DGA / 09",
+    "estado": "SUSPENSO",
+    "delegacao": "Maputo",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2017-02-14",
+    "dataValidade": "2026-12-31",
+    "publico": false
+  },
+  {
+    "id": "000800080919",
+    "nome": "Célia Fernando",
+    "cedula": "DESP / 008 / DGA / 10",
+    "estado": "REGISTADO",
+    "delegacao": "Xai-Xai",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2018-06-30",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "000900090920",
+    "nome": "Mário Alberto",
+    "cedula": "DESP / 009 / DGA / 11",
+    "estado": "REGISTADO",
+    "delegacao": "Pemba",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2019-09-18",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  },
+  {
+    "id": "001000100921",
+    "nome": "Laura Miguel",
+    "cedula": "DESP / 010 / DGA / 12",
+    "estado": "REGISTADO",
+    "delegacao": "Maputo",
+    "categoria": "Despachante Aduaneiro",
+    "dataRegisto": "2020-04-01",
+    "dataValidade": "2026-12-31",
+    "publico": true
+  }
+]
