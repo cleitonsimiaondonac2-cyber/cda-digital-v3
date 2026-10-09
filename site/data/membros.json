@@ -1,0 +1,1964 @@
+[
+  {
+    "nome": "Abdala Ossiela Tomé Mebeué",
+    "nCarta": "008102440414",
+    "empresa": "S & A Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Abdul Carimo Mamade Issufo",
+    "nCarta": "005200490912",
+    "empresa": "A.C Issufo - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Abdul Gafar Esmail",
+    "nCarta": "024202400414",
+    "empresa": "WING KOON . LDA",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Abdul Karim Osman",
+    "nCarta": "009102640514",
+    "empresa": "AKO - Abdul Karim Osman - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Abdul Rahimo Sulemane Chirida",
+    "nCarta": "025303301120",
+    "empresa": "ARCHAL SOCIEDADE UNIPESSOAL, LIMITADA",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Abílio José Francisco Gimo",
+    "nCarta": "020302010613",
+    "empresa": "ABIGICO - Despachantes Aduaneiros, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Abílio de Lobão Soeiro Júnior",
+    "nCarta": "011503320221",
+    "empresa": "Boutiques de Maputo, Lda.",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Acácio Botão Fernandes Gonçalves",
+    "nCarta": "020902070613",
+    "empresa": "MANICA FREIGHT SERVICES (MOÇ) S.A.",
+    "situacao": "Independente",
+    "provincia": "Manica",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Acácio Chamusse Cuambe",
+    "nCarta": "018701830413",
+    "empresa": "Acácio Cuambe Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adel Muage Weng",
+    "nCarta": "004100380912",
+    "empresa": "AWEDA - Adel Weng - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adelina Raimundo Zango",
+    "nCarta": "003502760615",
+    "empresa": "DAAZ - Adelina Zango Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adolfo Manuel da Silva Correia",
+    "nCarta": "006200590912",
+    "empresa": "Tropigália, Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adriana Nália Savanguana",
+    "nCarta": "003600330912",
+    "empresa": "Arnaldo N.Guibunda e Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adriano Lucas Faduco",
+    "nCarta": "012202730515",
+    "empresa": "Grupo Faduco, Lda",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Adélio Tiago Assane",
+    "nCarta": "019701930413",
+    "empresa": "Casa de Despachos, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Quelimane",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Agige Abdala",
+    "nCarta": "024402600514",
+    "empresa": "SOCOAL - Sociedade Comercial Africana. Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Agostinho Alberto Massangaia",
+    "nCarta": "026303290920",
+    "empresa": "K&C XPRESS DESPACHOS SOCIEDADE UNIPESSOAL, LIMITADA",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Agostinho Matavele",
+    "nCarta": "016201590313",
+    "empresa": "Agostinho Matavel Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Alberto Lapissone Dick",
+    "nCarta": "020402020613",
+    "empresa": "Alberto Lapisson Dick Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Manica",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Alberto Paulo Malache",
+    "nCarta": "001300100912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Albino Sebastião Grumor Dimene",
+    "nCarta": "001200090912",
+    "empresa": "ASGD - SUP , LIMITADA",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Alexandre José Uele Meque",
+    "nCarta": "008500840313",
+    "empresa": "IMOPETRO - Importadora de Petróleo, Lda",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Alexandre Júlio Sumbana",
+    "nCarta": "014502460414",
+    "empresa": "Francisco Umbure Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Alexandre Mazungane Muianga",
+    "nCarta": "005100480912",
+    "empresa": "A & C Desp. Aduaneiros e Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Alfredo Castigo Vasco Matsinhe",
+    "nCarta": "008200810313",
+    "empresa": "Alfredo Matsinhe Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Alice Teresa Pereira Shuman",
+    "nCarta": "007500740313",
+    "empresa": "ATPS - Alice Teresa Pereira Shuman - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Aline Magda de S. Gama Afonso",
+    "nCarta": "001100080912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Amâncio Anastácio Muianga",
+    "nCarta": "016701640313",
+    "empresa": "Amâncio Anastâncio Muianga - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Amélia Alfredo Chirindza",
+    "nCarta": "007202740515",
+    "empresa": "Amélia Alfredo Chirindza - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Américo Luís Banda",
+    "nCarta": "014301410313",
+    "empresa": "ALB - Américo Luís Banda - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Ana Rosalia de Sousa",
+    "nCarta": "004500420912",
+    "empresa": "MANICA FREIGHT SERVICES (MOÇ) S.A.",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Anastâcio Dinís Dinas",
+    "nCarta": "023302310913",
+    "empresa": "Anastâcio Dinís Dinas - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Angelina António Moiana",
+    "nCarta": "017601720313",
+    "empresa": "Angelina António Moiana - Desp. Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Angelino Rodriguês Nhacalangue",
+    "nCarta": "001400110912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Angélica Maria Quia Palate",
+    "nCarta": "020101990613",
+    "empresa": "Angel Consultoria, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Anselmo Luís Daná",
+    "nCarta": "004600430912",
+    "empresa": "Anselmo Daná - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "António Américo Manhiça",
+    "nCarta": "011102900915",
+    "empresa": "António Américo Manhiça - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "António Carlos Funzamo Tivane",
+    "nCarta": "010000980313",
+    "empresa": "António Tivane - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "António Domingos Saene",
+    "nCarta": "024302410920",
+    "empresa": "S & A Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "António Majossane Bila",
+    "nCarta": "012102960116",
+    "empresa": "António Majossane Bila e Associados - Despachantes Aduaneiros. Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "António Manuel Mapie",
+    "nCarta": "021602140613",
+    "empresa": "António Manuel Mapie - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Arlindo Alexandre Pondja",
+    "nCarta": "022502230913",
+    "empresa": "Arlindo Alexandre Pondja - Desp. Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Arlindo Cumbe",
+    "nCarta": "015602910915",
+    "empresa": "Arlindo Cumbe - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Armindo Fernando Tinga",
+    "nCarta": "001500120912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Armindo da Silva Hamene",
+    "nCarta": "006502800715",
+    "empresa": "Armindo Haméne - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Arnaldo Caçaldo Wate",
+    "nCarta": "018502680914",
+    "empresa": "ARCAWA - Serviços Soc. Unipessoal, Lda",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Artur Sérgio de Noronha Assubuji",
+    "nCarta": "025603070417",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Baptista Alvião Gomes",
+    "nCarta": "022302210913",
+    "empresa": "Baptista Alvião Gomes – Despachante Aduaneiro E.I",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Benjamim Luís Gravata",
+    "nCarta": "017501710313",
+    "empresa": "Benjamim Luís Gravata - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Bernardo Xavier Foquiço",
+    "nCarta": "010401020313",
+    "empresa": "BFDA - Bernardo Foquiço - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Bruno Miguel José Moça",
+    "nCarta": "001000070912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Manica",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Carlos F. Filomeno da Gama Afonso",
+    "nCarta": "000100010912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Carlos José Manhiça",
+    "nCarta": "009502550414",
+    "empresa": "Carlos José Manhiça - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Carlos João Marambige",
+    "nCarta": "010803200319",
+    "empresa": "Carlos Joao Marambige - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Carlos Miguel Panguana",
+    "nCarta": "001700140912",
+    "empresa": "A & C Desp. Aduaneiros e Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Casimiro António Assura",
+    "nCarta": "015501530313",
+    "empresa": "ADEC - Agência de Despacho Casimiro",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Casimiro Ernesto Alberto Mendonça",
+    "nCarta": "013201300313",
+    "empresa": "Sodel - Sociedades de Despachos, Lda.",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Catija Hussene Nalagy",
+    "nCarta": "002900260912",
+    "empresa": "Hussene Nalagy-Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Celeste Milagrosa Matusse Gomes",
+    "nCarta": "016901660313",
+    "empresa": "Celeste Milagrosa Matusse - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Celso Africano Camplé",
+    "nCarta": "025703141018",
+    "empresa": "DALOG - Despachos Aduaneiros, Logistica e Consultaria - Sociedade Unipessoal, Lda",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Clemente Ciro Justino",
+    "nCarta": "010100990313",
+    "empresa": "Clemente Justino - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Custódio Alfredo",
+    "nCarta": "021502690914",
+    "empresa": "Custódio Alfredo - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Célia Abílio Saete",
+    "nCarta": "007000670912",
+    "empresa": "Sábito e Associados- Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "César Abílio Essau",
+    "nCarta": "023902370913",
+    "empresa": "César Abílio Essau - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Danilo Edgar Jane Martins Morgado",
+    "nCarta": "022803290620",
+    "empresa": "DMS - Despachante Aduaneiro, Sociedade Unipessoal, Limitada",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "David Alexandre Dimande",
+    "nCarta": "004700440912",
+    "empresa": "EMPATEL - Serviços de Despachos Aduaneiros, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "David João Assunção Mucare",
+    "nCarta": "008600850313",
+    "empresa": "David Mucare – Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Deca Fernando Tito",
+    "nCarta": "008903190319",
+    "empresa": "MEGA DESPACHOS-SOCIEDADE UNIPESSOAL, LDA",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Delfim Rosita Manuel",
+    "nCarta": "016601630313",
+    "empresa": "DEROMA - Despachante Aduaneiro, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Dilavar Hussen Issufo",
+    "nCarta": "006100580912",
+    "empresa": "SANAM, LDA",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Nampula",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Dina Sofia Mogne Issá Mussá",
+    "nCarta": "002600230912",
+    "empresa": "Dina Mussá - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Dixon John Noé Chongo",
+    "nCarta": "008303420925",
+    "empresa": "Dixon Chongo - Despachante Aduaneiro, SU, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Domingos António Mateus",
+    "nCarta": "013401320313",
+    "empresa": "Domingos António Mateus - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Dário Francisco",
+    "nCarta": "011403080617",
+    "empresa": "DESPACHANTE ADUANEIRO DARIO FRANCISCO",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Edgar Ricardo",
+    "nCarta": "024702700215",
+    "empresa": "Monomotapa Comercial, Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Edson Clarêncio Uamusse",
+    "nCarta": "007800770313",
+    "empresa": "ECU-Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Eduarda Paula Paredes da Silva",
+    "nCarta": "003400310912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Eleutério Tsongole Joaquim",
+    "nCarta": "019002420414",
+    "empresa": "Eleutério T. Joaquim - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Elias Filipe Fumo",
+    "nCarta": "017401700313",
+    "empresa": "Elias Filipe Fumo - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Elsa Anita Baptista",
+    "nCarta": "010201000313",
+    "empresa": "Elsa Anita Baptista - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Elton Narciso Comissário Jonace",
+    "nCarta": "015201500313",
+    "empresa": "ENADAL - Elton Narciso Jonace Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Elvira Adelaide da Silva",
+    "nCarta": "015701540313",
+    "empresa": "Elvira Silva - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Elídio Armando Arone",
+    "nCarta": "015901560313",
+    "empresa": "E & L Agenciamentos e Serviços, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Emídio Agnaldo Mabjaia",
+    "nCarta": "018602430414",
+    "empresa": "S & A Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Ester Fátima Magaia Timóteo",
+    "nCarta": "000402951115",
+    "empresa": "Zacarias Timóteo & Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Ester Fátima Ngove Muchope",
+    "nCarta": "003000270912",
+    "empresa": "Ester Fátima Muchope - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Eurico Sebastião Uamusse",
+    "nCarta": "014802470414",
+    "empresa": "HBM - Desp. Aduaneiro & Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Eva Lazaro Massingue",
+    "nCarta": "007100680912",
+    "empresa": "Sábito e Associados- Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Fanuel Samuel Paunde",
+    "nCarta": "017301690313",
+    "empresa": "Fanuel Paunde - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Feliciano Raimundo Mataveia",
+    "nCarta": "002303120618",
+    "empresa": "FM - Feliciano Raimundo Mataveia - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Felismino Elias Macamo",
+    "nCarta": "019501910413",
+    "empresa": "DECOS, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Felismino Luís Filipe Matenge",
+    "nCarta": "015301510313",
+    "empresa": "FELIFIM - Despachante Aduaneiro Independente",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Felizardo João Nhambe Júnior",
+    "nCarta": "020202000613",
+    "empresa": "Felizardo Nhambe - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Felizardo Silvano Manhique",
+    "nCarta": "013901370313",
+    "empresa": "Felizardo Silvano Manhique - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Fernando Sivane Timbe",
+    "nCarta": "009600950313",
+    "empresa": "Fernando Sinava Timbe - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Filipe Serafim Mutisse",
+    "nCarta": "018401800413",
+    "empresa": "Filipe Serafim Mutisse - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Filipe Victor Guiamba",
+    "nCarta": "006400610912",
+    "empresa": "F.V.Guiamba- Despachos Aduaneiros, Consultoria e Servicos",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Flora Macuvele",
+    "nCarta": "004000370912",
+    "empresa": "FLOMAC - Flora Macuvele - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Florentina Vírgilio Alberto",
+    "nCarta": "002500220912",
+    "empresa": "Florentina Virgílio Alberto - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Florêncio Paulo Matola",
+    "nCarta": "019401900413",
+    "empresa": "DECOS, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Francelino Armando Mangue",
+    "nCarta": "022702250913",
+    "empresa": "Francelino Mangue - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Francisco Joaquim Quinova Panchoneia",
+    "nCarta": "024602620514",
+    "empresa": "Francisco Panchoneia Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Francisco Rafael",
+    "nCarta": "010301010313",
+    "empresa": "Francisco Rafael - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Quelimane",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Francisco Valente Coana",
+    "nCarta": "020702050613",
+    "empresa": "Associação Das Testemunhas de Jeová de Moçambique",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Félix Américo Guiliche Chandamela",
+    "nCarta": "009700960313",
+    "empresa": "Felix Chandamela - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Fídel João Henriques",
+    "nCarta": "021902170613",
+    "empresa": "Fidel João Henriques - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Gabriel Salomão Nhancale",
+    "nCarta": "012703130618",
+    "empresa": "GASN - Gabriel Salomão Nhacale - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Gardino João Txopela",
+    "nCarta": "014101390313",
+    "empresa": "Gardino João Txopela - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Pemba",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Georgina Sónia Chaúque",
+    "nCarta": "006800650912",
+    "empresa": "GSC - Georgina Sónia Chaúque - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Gervásio Armando Jeremias Lifaniça",
+    "nCarta": "023002280913",
+    "empresa": "Gervásio Armando J. Lifaniça - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Gilda Salete José Chioco",
+    "nCarta": "016101580313",
+    "empresa": "Gilda Salete - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Guilherme Júlio Mabjeca",
+    "nCarta": "021702150613",
+    "empresa": "Guilherme Mabjeca - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Henriqueta Luís Chiandela",
+    "nCarta": "005000470912",
+    "empresa": "João Albasini e Associados, Lda",
+    "situacao": "Empregado (não submete declarações)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Henriqueta Matilde José Naueia",
+    "nCarta": "023402320913",
+    "empresa": "USAID MOÇ. - Embaixada dos E.U.A",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Hermenegildo Vasco Muchuane",
+    "nCarta": "016001570313",
+    "empresa": "Hermenegildo Vasco Muchuane-Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Hermínio Paulo Macuiane",
+    "nCarta": "019301890413",
+    "empresa": "DECOS, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Horácio Bentuel Massalane",
+    "nCarta": "014901470313",
+    "empresa": "HBM - Desp. Aduaneiro & Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nampula",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Humberto Benavides Arnaldo Guibunda",
+    "nCarta": "003700340912",
+    "empresa": "Arnaldo N.Guibunda e Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Hussene Bay Nalagy",
+    "nCarta": "000200020912",
+    "empresa": "Hussene Nalagy-Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Isac Jacinto Muando",
+    "nCarta": "016401610313",
+    "empresa": "CONSAD - Consultoria & Serviços Aduaneiros, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Isaías Pechisso Chijumane",
+    "nCarta": "018001760413",
+    "empresa": "ISAPE - Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Jacinta Florbela Moreira Nalochila",
+    "nCarta": "019103350821",
+    "empresa": "Centro de Despachos Aduaneiros. Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nampula",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Joaquim José Furado de Oliveira",
+    "nCarta": "025803161218",
+    "empresa": "TOPACK",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Joaquim Moiocubira Mateus Manguaiana",
+    "nCarta": "013601340313",
+    "empresa": "JMM - Joaquim M. Mateus Manguaiana - Desp Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Joaquim Vidigal Franck",
+    "nCarta": "021403350521",
+    "empresa": "JVF - Despachante Aduaneiro Comércio e Consultoria, Lda.",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Jorge Jacinto Bambo",
+    "nCarta": "015801550313",
+    "empresa": "JB - Despachante Aduaneiro e Serviços",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Jorge Xlhone",
+    "nCarta": "010602990216",
+    "empresa": "Bernardo Xavier Foquiço - Desp. Aduaneiro",
+    "situacao": "Empregado (não submete declarações)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "José Domingos Mazuze",
+    "nCarta": "018201780413",
+    "empresa": "José D. Mazuze - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "José Jó Tomo Pantie",
+    "nCarta": "022402220913",
+    "empresa": "PAHO, Lda (José Jó Tomo Pantie - Despachante Aduaneiro).",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "José Mateus Manuel",
+    "nCarta": "005500520520",
+    "empresa": "IMOPETRO - Importadora de Petróleos",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "João Chamisso Pholo",
+    "nCarta": "009901980613",
+    "empresa": "João Chamisso Pholo - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Pemba",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "João Manuel Quicimusso",
+    "nCarta": "021002080613",
+    "empresa": "JMQ - João Manuel Quicimusso - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Judite Fernando da Silva",
+    "nCarta": "018302970116",
+    "empresa": "António Majossane Bila e Associados - Despachantes Aduaneiros. Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Juldio Ernesto Faife",
+    "nCarta": "005700540912",
+    "empresa": "J Faife Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Julieta Constatino Machatine",
+    "nCarta": "019901500413",
+    "empresa": "EMPRESTIL",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Júlia Carrilho Almeida da Silva",
+    "nCarta": "002400210912",
+    "empresa": "JCAS - Julia Carrilho A. da da Silva - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Júlio Pascoal Vilanculos",
+    "nCarta": "011001080313",
+    "empresa": "Kawena Distribuidores, Lda",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Júlio Pedro Sitoe",
+    "nCarta": "016501620313",
+    "empresa": "World - Agência de Despachos Aduaneiros e Serviços",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Labão Alfredo de Assunção José",
+    "nCarta": "008700860313",
+    "empresa": "Labao Alfredo - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Lino Zacarias Massicane",
+    "nCarta": "003100280912",
+    "empresa": "SODEL-SOCIEDADE DE DESPACHOS, LDA",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Lucas Pedro Seth Langa",
+    "nCarta": "023703380322",
+    "empresa": "Lucas Langa Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Matola",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Lucas Zingai Quembo Nhandiro",
+    "nCarta": "018801840413",
+    "empresa": "Dimar Serviços, Lda",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Luís António Dias",
+    "nCarta": "022602240913",
+    "empresa": "Luís António Dias - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Luís Dias Milagres Tivane",
+    "nCarta": "015101490313",
+    "empresa": "Luís Dias Milagres Tivane - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Madalena dos Anjos Chambul",
+    "nCarta": "011801160313",
+    "empresa": "Madalena dos Anjos Chambul Desp. Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Mafalda Luís Amado",
+    "nCarta": "005800550912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Mamad Anifo Alimamad Issá",
+    "nCarta": "012602480414",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Mamed Charif Amad Ussen",
+    "nCarta": "020802060613",
+    "empresa": "MOZAMBIQUE COMPUTERS INTERNATIONAL. Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Manuel A. Dos Santos e Meneses Cabral",
+    "nCarta": "012401220313",
+    "empresa": "Manuel Meneses Cabral - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Manuel Francisco Nhamizinga",
+    "nCarta": "020602530414",
+    "empresa": "MPDA - Mauro Pereira Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Manuel Jaime Hambucane",
+    "nCarta": "018101770413",
+    "empresa": "HBM - Desp. Aduaneiro & Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Manuel Leopoldo Ricardo Binana",
+    "nCarta": "022102190913",
+    "empresa": "Manuel Leopoldo R. Binana - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Manuel Roberto",
+    "nCarta": "007302500414",
+    "empresa": "Fábrica de Explosivos de Moçambique, Lda.",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Marcelino Abel Cardoso Nameli",
+    "nCarta": "004802520414",
+    "empresa": "Marcelino Abel C. Nameli - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Marcelo António Vitor dos Santos",
+    "nCarta": "026403311220",
+    "empresa": "Marcelo Santos Despachante Aduaneiro & Serviços, EI",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Maria Helena Melembe",
+    "nCarta": "004200390912",
+    "empresa": "MANICA FREIGHT SERVICES (MOÇ) S.A.",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Maria Stela Felizardo Fumo Nhanombe",
+    "nCarta": "009000890313",
+    "empresa": "Maria Stela F. Fumo Nhanombe - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Mariamo Francisco Mourana",
+    "nCarta": "008802580414",
+    "empresa": "MF Mourana Despachante Aduaneiro Sociedade Unipessoal, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Marta Jacinto Cossa",
+    "nCarta": "013101290313",
+    "empresa": "Marta Jacinto Cossa - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Martinho David Macuacua",
+    "nCarta": "010501030313",
+    "empresa": "Martinho David Macuacua - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Mauro Danilo Monteiro Fernandes Pereira",
+    "nCarta": "008400830313",
+    "empresa": "MPDA - Mauro Pereira Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Maysa Paula Aleixo de P. Ferreira Albasini",
+    "nCarta": "002800250912",
+    "empresa": "João Albasini e Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Mirage Camal",
+    "nCarta": "003800350912",
+    "empresa": "Mirage Camal Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Moisés Mário Cumbane",
+    "nCarta": "005303020616",
+    "empresa": "PETROMOC. SA",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Momade Arif Rajahussen Gulamo",
+    "nCarta": "025903171218",
+    "empresa": "GRUPO GULAMO",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Moníz Manuel Nguenha",
+    "nCarta": "022202200913",
+    "empresa": "Moniz Manuel Nguenha - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Muhammad Al-amin Flór Langa",
+    "nCarta": "017801740313",
+    "empresa": "MADA - Muhammad Al-amin Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Mário Ernesto Marronco",
+    "nCarta": "010901070313",
+    "empresa": "Mário E. Marronco - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Mário Manuel Matique",
+    "nCarta": "016303420125",
+    "empresa": "IMOPETRO - Importadora Moçambicana de Petróleos, Lda",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Múcio Manuel Cuna Tchebete",
+    "nCarta": "023802360913",
+    "empresa": "Múcio Tchebete & Co - Despachantes Associados Lda",
+    "situacao": "Independente",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Nelson Caetano Coutinho Luís",
+    "nCarta": "014201400313",
+    "empresa": "Nelson Luís Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Nelson Filipe Monjane",
+    "nCarta": "007403390822",
+    "empresa": "Nelson Filipe Monjane - Despachante Aduaneiro, E.I.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Nelson Joaquim José Rede",
+    "nCarta": "013801360313",
+    "empresa": "DANER - Despachante Aduaneiro Nelson Rede",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Nelson Valimamade Ginabay",
+    "nCarta": "026203280520",
+    "empresa": "Nelson Valimamade Ginabay - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Nilza Manuel Santana Portugal",
+    "nCarta": "012801260313",
+    "empresa": "NMS Portugal - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Nuno André Nehemia",
+    "nCarta": "004900460912",
+    "empresa": "EMPATEL - Serviços de Despachos Aduaneiros, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Orlanda Silvestre Zandamela dos Anjos",
+    "nCarta": "003303151118",
+    "empresa": "EDWINNA DESPACHANTE ADUANEIRO - SOCIEDADE UNIPESSOAL, Lda",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Osvaldo Raimundo Luís Nguirazi",
+    "nCarta": "002100180912",
+    "empresa": "Osvaldo R. L. Nguirazi – Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pascuinha José Armando Cassimo",
+    "nCarta": "024002380913",
+    "empresa": "Pascuinha J. A. Cassimo - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Paulino José Mourinho",
+    "nCarta": "013701350313",
+    "empresa": "PJM - Paulino José Mourinho - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Paulino Mungone Timana",
+    "nCarta": "011201100313",
+    "empresa": "PATIDA - Paulino Timana Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pedro Alfredo Sabonete Vilanculos",
+    "nCarta": "017901750413",
+    "empresa": "ISAPE - Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pedro António Jamisse Massunda",
+    "nCarta": "007900780313",
+    "empresa": "Pedro Massunda - Despachante Aduaneiro Sociedade Unipessoal, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pedro Armando Sicobell Chissico",
+    "nCarta": "004303420824",
+    "empresa": "PEDRO CHISSICO DESPACHANTE ADUANEIRO - SOCIEDADE UNIPESSOAL, LDA.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pedro Ausêncio Bonifácio Saulosse",
+    "nCarta": "006900660912",
+    "empresa": "PASDA - Pedro Ausêncio Saulosse Despachante Aduaneiro, Soc. Unip. Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Pedro Bernardo Tualufo",
+    "nCarta": "022902270913",
+    "empresa": "PBT & Associados Desp. Aduaneiros, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nampula",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Raimundo Salvador Chaúque",
+    "nCarta": "026503411223",
+    "empresa": "Raimundo Chaúque Consultoria & Serviços, EI.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Raquel Armando Cumbana",
+    "nCarta": "021802160613",
+    "empresa": "Raquel Armando Cumbana - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Raquel Inácio Simbine",
+    "nCarta": "021303020616",
+    "empresa": "Raquel Inácio Simbine - Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Roberto Azarias Nhate",
+    "nCarta": "001600130912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Roberto Pedro José Anselmo",
+    "nCarta": "010701050313",
+    "empresa": "ROBERTO P.J.ANSELMO-DESPACHANTE ADUANEIRO",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Rodrigues Samgi",
+    "nCarta": "009202560414",
+    "empresa": "SODEMO - Sociedade de Despachos, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Rogério Rafael Tembe",
+    "nCarta": "024803411022",
+    "empresa": "Rogério Tembe, Serviços e Despachos Aduaneiros",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Rogério de Vasconcelos Texeira",
+    "nCarta": "024902750515",
+    "empresa": "TM & T Moçambique. Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Romeu Obadias Madime",
+    "nCarta": "008000790313",
+    "empresa": "Romeu Madime Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Rui Eduardo Paredes da Silva",
+    "nCarta": "002000170912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Rui de Sousa Gabriel Chelene",
+    "nCarta": "012301210313",
+    "empresa": "RC & Associados, Lda.",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Pemba",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Salmate Chuaibo Daud",
+    "nCarta": "003203360921",
+    "empresa": "Salmate Chuaibo Despachante Aduaneira Sociedade Unipessoal, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Salvador João Matavel Júnior",
+    "nCarta": "013003240919",
+    "empresa": "Universal-Moçambique Leaf Tobacco Limitada",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Tete",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Samuel Arone Mandlate",
+    "nCarta": "006300600912",
+    "empresa": "Maet Trading, Lda",
+    "situacao": "Administrador de Empresa",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sheila Albertina Hassan Mahomed",
+    "nCarta": "011801160313",
+    "empresa": "SHEILA ALBERTINA HASSAN MAHOMED - SOC. UNIPESSOAL, LDA.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Simão Inácio Cossa",
+    "nCarta": "009803220819",
+    "empresa": "Simão Inácio Cossa - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sofia Mavoja António Simango",
+    "nCarta": "007603101117",
+    "empresa": "S.S Despachos - Sociedade Unipessoal. Lda",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sábito Joaquim Romeu",
+    "nCarta": "006700640912",
+    "empresa": "Sábito e Associados- Desp. Aduaneiro, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sérgio Alfredo Macandza",
+    "nCarta": "021202100613",
+    "empresa": "Sérgio Alfredo Macandza - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sérgio Almeida Matine Nhaca",
+    "nCarta": "007702450414",
+    "empresa": "SamaN - Despachante Aduaneiro, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sérgio Angelo Guambe",
+    "nCarta": "005400510912",
+    "empresa": "GARP-C.F Gama Afonso Desp. Oficial,Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sérgio Henrique Tembue",
+    "nCarta": "023603251019",
+    "empresa": "Tongaat Hulett - Açucareira de Xinavane",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Matola",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Sílvia Sarmento Guiliche",
+    "nCarta": "013502630514",
+    "empresa": "Silvia Sarmento Guiliche Despachante Aduaneira",
+    "situacao": "Independente",
+    "provincia": "Nacala",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Valeriano da Cruz Sabão",
+    "nCarta": "026103270320",
+    "empresa": "VALERIANO DA CRUZ SABÃO - DESPACHANTE ADUANEIRO",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Vasco Matsinhe",
+    "nCarta": "019801940413",
+    "empresa": "EMPRESTIL",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Vicente Ouana",
+    "nCarta": "001900160912",
+    "empresa": "Vicente Ouana Despachante Aduaneiro Sociedade Unipessoal, Lda",
+    "situacao": "Independente",
+    "provincia": "Pemba",
+    "delegacao": "Norte",
+    "activo": true
+  },
+  {
+    "nome": "Victor Manuel Nhaule",
+    "nCarta": "014703371021",
+    "empresa": "HBM - Despachante Aduaneiro e Associados Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Victor Nelson Matos de Sousa",
+    "nCarta": "000900060912",
+    "empresa": "Victor Sousa - Despachante Aduaneiro Sociedade Unipessoal, Lda.",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Zacarias Miguel Mabunda",
+    "nCarta": "018901850413",
+    "empresa": "PETROMOC, SA",
+    "situacao": "Assalariado (só mercadoria consignada)",
+    "provincia": "Beira",
+    "delegacao": "Centro",
+    "activo": true
+  },
+  {
+    "nome": "Zefanias Luanica Ndimande",
+    "nCarta": "017703090617",
+    "empresa": "Zefanias Luanica Ndimande - Despachante Aduaneiro",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Zulfa Hussene Nalagy",
+    "nCarta": "004400410912",
+    "empresa": "Hussene Nalagy-Despachantes Associados, Lda",
+    "situacao": "Sócio de Sociedade",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  },
+  {
+    "nome": "Élia Elisabeth André dos Reis Manhiça",
+    "nCarta": "002202980216",
+    "empresa": "EL REIS - SOCIEDADE UNIPESSOAL, LDA",
+    "situacao": "Independente",
+    "provincia": "Maputo",
+    "delegacao": "Sul",
+    "activo": true
+  }
+]

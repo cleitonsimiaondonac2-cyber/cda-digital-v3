@@ -1,0 +1,79 @@
+[
+  {
+    "cargo": "Presidente da CDA",
+    "nome": "Salmate Chuaibo Daud",
+    "orgao": "Direcção",
+    "foto": "img/orgaos/salmate-chuaibo.jpg"
+  },
+  {
+    "cargo": "Vice-Presidente da CDA para a Zona Norte",
+    "nome": "Albino Sebastião Grumor Dimene",
+    "orgao": "Direcção"
+  },
+  {
+    "cargo": "Vice-Presidente da CDA para a Zona Centro",
+    "nome": "Nelson Caetano Coutinho Luís",
+    "orgao": "Direcção"
+  },
+  {
+    "cargo": "Presidente da Mesa da Assembleia Geral",
+    "nome": "Sabito Joaquim Romeu",
+    "orgao": "Mesa da AG",
+    "foto": "img/orgaos/sabito-romeu.jpg"
+  },
+  {
+    "cargo": "Vice-Presidente da Mesa da Assembleia Geral",
+    "nome": "Júlia Carrilho Almeida da Silva",
+    "orgao": "Mesa da AG"
+  },
+  {
+    "cargo": "Secretário da Mesa da Assembleia Geral",
+    "nome": "Nelson Joaquim José Rede",
+    "orgao": "Mesa da AG"
+  },
+  {
+    "cargo": "Presidente do Conselho Deontológico",
+    "nome": "Pedro Armando S. Chissico",
+    "orgao": "Conselho Deontológico"
+  },
+  {
+    "cargo": "Conselho Deontológico — Zona Norte",
+    "nome": "Deca Fernando Tito",
+    "orgao": "Conselho Deontológico"
+  },
+  {
+    "cargo": "Conselho Deontológico — Zona Centro",
+    "nome": "Joaquim M. Mateus Manguaiana",
+    "orgao": "Conselho Deontológico"
+  },
+  {
+    "cargo": "Conselho Deontológico — Zona Sul",
+    "nome": "Flora Macuvele",
+    "orgao": "Conselho Deontológico"
+  },
+  {
+    "cargo": "Conselho Deontológico — Zona Sul",
+    "nome": "Humberto Benavides A. Guibunda",
+    "orgao": "Conselho Deontológico"
+  },
+  {
+    "cargo": "Conselho Directivo — Zona Norte",
+    "nome": "José Mateus Manuel",
+    "orgao": "Conselho Directivo"
+  },
+  {
+    "cargo": "Conselho Directivo — Zona Centro",
+    "nome": "Zacarias Miguel Mabunda",
+    "orgao": "Conselho Directivo"
+  },
+  {
+    "cargo": "Conselho Directivo — Zona Sul",
+    "nome": "Madalena dos Anjos Chambule",
+    "orgao": "Conselho Directivo"
+  },
+  {
+    "cargo": "Tesoureiro",
+    "nome": "Pedro Ausêncio Bonifácio Saulosse",
+    "orgao": "Conselho Directivo"
+  }
+]
