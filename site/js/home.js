@@ -187,7 +187,7 @@
       // garantindo que o conteúdo excede a largura e o marquee pode correr).
       recentes.forEach(function (n) {
         var a = document.createElement("a");
-        a.href = "noticias.html";
+        a.href = n.url || "noticias.html";
         a.style.flex = "0 0 auto";
         a.textContent = n.titulo + "  ·  " + dataCurta(n.data);
         track.appendChild(a);
@@ -268,9 +268,10 @@
     // --- o destaque ---
     var topo = recentes[0];
     if (topo) {
+      var isRevista = topo.editorial === true || topo.url === "revista.html" || /regressa/i.test(topo.titulo || "");
       var destaque = document.createElement("a");
       destaque.className = "news-destaque";
-      destaque.href = "noticias.html";
+      destaque.href = topo.url || "noticias.html";
 
       // Sem imagem, o destaque fica só com texto — nunca geramos <img src="">
       if (temImagem(topo)) {
@@ -308,7 +309,7 @@
 
       var maisD = document.createElement("span");
       maisD.className = "leia-mais";
-      maisD.textContent = "Ler a notícia";
+      maisD.textContent = isRevista ? "Ler a revista" : "Ler a notícia";
       corpoD.appendChild(maisD);
 
       destaque.appendChild(corpoD);
@@ -322,7 +323,7 @@
         resto.forEach(function (n) {
           var a = document.createElement("a");
           a.className = "news-item";
-          a.href = "noticias.html";
+          a.href = n.url || "noticias.html";
 
           var m = document.createElement("div");
           m.className = "news-item__media";

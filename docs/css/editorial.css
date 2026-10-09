@@ -113,7 +113,7 @@ a:hover { color: var(--vm-600); }
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(520px, 74vh, 780px);
+  min-height: clamp(500px, 66vh, 700px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -159,7 +159,7 @@ a:hover { color: var(--vm-600); }
 /* --- conteudo --- */
 .hero-inner { position: relative; z-index: 2; width: 100%; padding-block: clamp(2.5rem, 6vh, 4.5rem) 0; }
 
-.hero-copy { max-width: 34ch; }
+.hero-copy { max-width: 40ch; }
 
 .hero .pill {
   display: inline-flex;
@@ -199,6 +199,7 @@ a:hover { color: var(--vm-600); }
 }
 
 .hero-copy .lead {
+  display: block;
   max-width: 46ch;
   font-size: var(--e-lead);
   line-height: 1.45;
