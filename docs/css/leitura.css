@@ -409,3 +409,13 @@ textarea:focus-visible {
   color: inherit;
   background-color: inherit;
 }
+
+/* ============================================================
+   AJUSTE — Foco vertical das imagens de pessoas (rostos ligeiramente
+   acima do centro), evitando cortes. Não afeta logos (contain).
+   ============================================================ */
+.galeria img,
+.act-destaque-media img,
+.act-card-media img,
+.act-det-galeria img,
+.cdaact-media img { object-position: center 28%; }

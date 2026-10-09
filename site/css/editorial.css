@@ -138,7 +138,7 @@ a:hover { color: var(--vm-600); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: var(--foco, center);
+  object-position: var(--foco, center 28%);
   /* leve zoom, so no slide activo: dá vida sem distrair */
   transform: scale(1.02);
   transition: transform 7s ease-out;
@@ -417,7 +417,7 @@ a:hover { color: var(--vm-600); }
 @media (max-width: 760px) { .news-destaque { grid-template-columns: 1fr; } }
 
 .news-destaque__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
-.news-destaque__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center); transition: transform 900ms cubic-bezier(.2, .7, .3, 1); }
+.news-destaque__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center 28%); transition: transform 900ms cubic-bezier(.2, .7, .3, 1); }
 .news-destaque:hover .news-destaque__media img { transform: scale(1.045); }
 
 .news-destaque__body { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.6rem, 3vw, 2.6rem); color: #fff; }
@@ -483,7 +483,7 @@ a:hover { color: var(--vm-600); }
 @media (max-width: 560px) { .news-item { grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; } }
 
 .news-item__media { aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--r-m); background: var(--areia-2); }
-.news-item__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center); transition: transform 600ms cubic-bezier(.2, .7, .3, 1); }
+.news-item__media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, center 28%); transition: transform 600ms cubic-bezier(.2, .7, .3, 1); }
 .news-item:hover .news-item__media img { transform: scale(1.06); }
 
 .news-item__cat { color: var(--vm-600); font-size: var(--e-micro); font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
@@ -1022,4 +1022,12 @@ a:hover { color: var(--vm-600); }
 
 @media (prefers-reduced-motion: reduce) {
   .side-detalhe > summary::after { transition: none; }
+}
+/* ============================================================
+   AJUSTE — Destaque/capa: a imagem preenche a altura do card,
+   eliminando o vazio por baixo da fotografia. No mobile (<761px)
+   mantém-se a proporção 16/10 definida na regra base.
+   ============================================================ */
+@media (min-width: 761px) {
+  .news-destaque__media { aspect-ratio: auto; }
 }
